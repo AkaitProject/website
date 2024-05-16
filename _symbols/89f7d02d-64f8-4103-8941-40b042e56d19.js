@@ -2820,7 +2820,7 @@ function get_each_context_1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (76:6) {#each footer_nav as { link }}
+// (73:6) {#each footer_nav as { link }}
 function create_each_block_1(ctx) {
 	let a;
 	let t_value = /*link*/ ctx[3].label + "";
@@ -2834,7 +2834,7 @@ function create_each_block_1(ctx) {
 			this.h();
 		},
 		l(nodes) {
-			a = claim_element(nodes, "A", { href: true });
+			a = claim_element(nodes, "A", { href: true, class: true });
 			var a_nodes = children(a);
 			t = claim_text(a_nodes, t_value);
 			a_nodes.forEach(detach);
@@ -2842,6 +2842,7 @@ function create_each_block_1(ctx) {
 		},
 		h() {
 			attr(a, "href", a_href_value = /*link*/ ctx[3].url);
+			attr(a, "class", "svelte-15gu7wo");
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
@@ -2860,7 +2861,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (82:6) {#each social as { link, icon }}
+// (78:6) {#each social as { link, icon }}
 function create_each_block(ctx) {
 	let li;
 	let a;
@@ -2899,7 +2900,7 @@ function create_each_block(ctx) {
 		h() {
 			attr(a, "href", a_href_value = /*link*/ ctx[3].url);
 			attr(a, "aria-label", a_aria_label_value = /*icon*/ ctx[4]);
-			attr(a, "class", "svelte-1q5miwu");
+			attr(a, "class", "svelte-15gu7wo");
 		},
 		m(target, anchor) {
 			insert_hydration(target, li, anchor);
@@ -2940,11 +2941,10 @@ function create_each_block(ctx) {
 function create_fragment(ctx) {
 	let footer;
 	let div;
-	let nav;
-	let t0;
 	let span;
-	let a;
+	let t0;
 	let t1;
+	let nav;
 	let t2;
 	let ul;
 	let current;
@@ -2970,16 +2970,15 @@ function create_fragment(ctx) {
 		c() {
 			footer = element("footer");
 			div = element("div");
+			span = element("span");
+			t0 = text("© World Developers Team, 2024");
+			t1 = space();
 			nav = element("nav");
 
 			for (let i = 0; i < each_blocks_1.length; i += 1) {
 				each_blocks_1[i].c();
 			}
 
-			t0 = space();
-			span = element("span");
-			a = element("a");
-			t1 = text("© World Developers Team, 2024");
 			t2 = space();
 			ul = element("ul");
 
@@ -2994,6 +2993,11 @@ function create_fragment(ctx) {
 			var footer_nodes = children(footer);
 			div = claim_element(footer_nodes, "DIV", { class: true });
 			var div_nodes = children(div);
+			span = claim_element(div_nodes, "SPAN", { class: true });
+			var span_nodes = children(span);
+			t0 = claim_text(span_nodes, "© World Developers Team, 2024");
+			span_nodes.forEach(detach);
+			t1 = claim_space(div_nodes);
 			nav = claim_element(div_nodes, "NAV", { class: true });
 			var nav_nodes = children(nav);
 
@@ -3002,14 +3006,6 @@ function create_fragment(ctx) {
 			}
 
 			nav_nodes.forEach(detach);
-			t0 = claim_space(div_nodes);
-			span = claim_element(div_nodes, "SPAN", { class: true });
-			var span_nodes = children(span);
-			a = claim_element(span_nodes, "A", { href: true, class: true });
-			var a_nodes = children(a);
-			t1 = claim_text(a_nodes, "© World Developers Team, 2024");
-			a_nodes.forEach(detach);
-			span_nodes.forEach(detach);
 			t2 = claim_space(div_nodes);
 			ul = claim_element(div_nodes, "UL", { class: true });
 			var ul_nodes = children(ul);
@@ -3024,17 +3020,18 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		h() {
-			attr(nav, "class", "svelte-1q5miwu");
-			attr(a, "href", "//github.com/WorldDevelopersTeam");
-			attr(a, "class", "svelte-1q5miwu");
-			attr(span, "class", "copyright svelte-1q5miwu");
-			attr(ul, "class", "svelte-1q5miwu");
-			attr(div, "class", "section-container svelte-1q5miwu");
-			attr(footer, "class", "svelte-1q5miwu");
+			attr(span, "class", "copyright svelte-15gu7wo");
+			attr(nav, "class", "svelte-15gu7wo");
+			attr(ul, "class", "svelte-15gu7wo");
+			attr(div, "class", "section-container svelte-15gu7wo");
+			attr(footer, "class", "svelte-15gu7wo");
 		},
 		m(target, anchor) {
 			insert_hydration(target, footer, anchor);
 			append_hydration(footer, div);
+			append_hydration(div, span);
+			append_hydration(span, t0);
+			append_hydration(div, t1);
 			append_hydration(div, nav);
 
 			for (let i = 0; i < each_blocks_1.length; i += 1) {
@@ -3043,10 +3040,6 @@ function create_fragment(ctx) {
 				}
 			}
 
-			append_hydration(div, t0);
-			append_hydration(div, span);
-			append_hydration(span, a);
-			append_hydration(a, t1);
 			append_hydration(div, t2);
 			append_hydration(div, ul);
 
