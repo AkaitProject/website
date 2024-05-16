@@ -2815,7 +2815,7 @@ function get_each_context(ctx, list, i) {
 	return child_ctx;
 }
 
-// (117:6) {#each cards as { icon, title, description }}
+// (107:6) {#each cards as { icon, title, description }}
 function create_each_block(ctx) {
 	let div1;
 	let div0;
@@ -2868,10 +2868,10 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(div0, "class", "icon svelte-iewj14");
-			attr(span0, "class", "title svelte-iewj14");
-			attr(span1, "class", "description svelte-iewj14");
-			attr(div1, "class", "card svelte-iewj14");
+			attr(div0, "class", "icon svelte-18rfn6l");
+			attr(span0, "class", "title svelte-18rfn6l");
+			attr(span1, "class", "description svelte-18rfn6l");
+			attr(div1, "class", "card svelte-18rfn6l");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div1, anchor);
@@ -2920,17 +2920,14 @@ function create_fragment(ctx) {
 	let t1;
 	let t2;
 	let form_1;
-	let input;
-	let input_placeholder_value;
-	let t3;
 	let button;
-	let t4_value = /*form*/ ctx[0].button_label + "";
+	let t3_value = /*form*/ ctx[0].button_label + "";
+	let t3;
 	let t4;
-	let t5;
 	let span;
-	let t6_value = /*form*/ ctx[0].footer + "";
+	let t5_value = /*form*/ ctx[0].footer + "";
+	let t5;
 	let t6;
-	let t7;
 	let div1;
 	let current;
 	let each_value = /*cards*/ ctx[1];
@@ -2956,14 +2953,12 @@ function create_fragment(ctx) {
 			t1 = text(/*heading*/ ctx[2]);
 			t2 = space();
 			form_1 = element("form");
-			input = element("input");
-			t3 = space();
 			button = element("button");
-			t4 = text(t4_value);
-			t5 = space();
+			t3 = text(t3_value);
+			t4 = space();
 			span = element("span");
-			t6 = text(t6_value);
-			t7 = space();
+			t5 = text(t5_value);
+			t6 = space();
 			div1 = element("div");
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -2973,26 +2968,19 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		l(nodes) {
-			svg = claim_svg_element(nodes, "svg", {
-				viewBox: true,
-				fill: true,
-				xmlns: true,
-				class: true
-			});
-
+			svg = claim_svg_element(nodes, "svg", { viewBox: true, fill: true, xmlns: true });
 			var svg_nodes = children(svg);
 
 			path = claim_svg_element(svg_nodes, "path", {
 				"fill-rule": true,
 				"clip-rule": true,
-				d: true,
-				class: true
+				d: true
 			});
 
 			children(path).forEach(detach);
 			svg_nodes.forEach(detach);
 			t0 = claim_space(nodes);
-			section = claim_element(nodes, "SECTION", { class: true });
+			section = claim_element(nodes, "SECTION", {});
 			var section_nodes = children(section);
 			div2 = claim_element(section_nodes, "DIV", { class: true });
 			var div2_nodes = children(div2);
@@ -3005,26 +2993,18 @@ function create_fragment(ctx) {
 			t2 = claim_space(div0_nodes);
 			form_1 = claim_element(div0_nodes, "FORM", { action: true, class: true });
 			var form_1_nodes = children(form_1);
-
-			input = claim_element(form_1_nodes, "INPUT", {
-				type: true,
-				placeholder: true,
-				class: true
-			});
-
-			t3 = claim_space(form_1_nodes);
 			button = claim_element(form_1_nodes, "BUTTON", { type: true, class: true });
 			var button_nodes = children(button);
-			t4 = claim_text(button_nodes, t4_value);
+			t3 = claim_text(button_nodes, t3_value);
 			button_nodes.forEach(detach);
 			form_1_nodes.forEach(detach);
-			t5 = claim_space(div0_nodes);
+			t4 = claim_space(div0_nodes);
 			span = claim_element(div0_nodes, "SPAN", { class: true });
 			var span_nodes = children(span);
-			t6 = claim_text(span_nodes, t6_value);
+			t5 = claim_text(span_nodes, t5_value);
 			span_nodes.forEach(detach);
 			div0_nodes.forEach(detach);
-			t7 = claim_space(div2_nodes);
+			t6 = claim_space(div2_nodes);
 			div1 = claim_element(div2_nodes, "DIV", { class: true });
 			var div1_nodes = children(div1);
 
@@ -3041,24 +3021,18 @@ function create_fragment(ctx) {
 			attr(path, "fill-rule", "evenodd");
 			attr(path, "clip-rule", "evenodd");
 			attr(path, "d", "M1440 175H0V0C240 53.3333 480 80 720 80C960 80 1200 53.3333 1440 0V175Z");
-			attr(path, "class", "svelte-iewj14");
 			attr(svg, "viewBox", "0 0 1440 175");
 			attr(svg, "fill", "none");
 			attr(svg, "xmlns", "http://www.w3.org/2000/svg");
-			attr(svg, "class", "svelte-iewj14");
 			attr(h2, "class", "heading");
-			attr(input, "type", "email");
-			attr(input, "placeholder", input_placeholder_value = /*form*/ ctx[0].placeholder);
-			attr(input, "class", "svelte-iewj14");
 			attr(button, "type", "button");
-			attr(button, "class", "svelte-iewj14");
+			attr(button, "class", "svelte-18rfn6l");
 			attr(form_1, "action", "");
-			attr(form_1, "class", "svelte-iewj14");
-			attr(span, "class", "footer svelte-iewj14");
-			attr(div0, "class", "signup svelte-iewj14");
-			attr(div1, "class", "cards svelte-iewj14");
-			attr(div2, "class", "section-container svelte-iewj14");
-			attr(section, "class", "svelte-iewj14");
+			attr(form_1, "class", "svelte-18rfn6l");
+			attr(span, "class", "footer svelte-18rfn6l");
+			attr(div0, "class", "contact svelte-18rfn6l");
+			attr(div1, "class", "cards svelte-18rfn6l");
+			attr(div2, "class", "section-container svelte-18rfn6l");
 		},
 		m(target, anchor) {
 			insert_hydration(target, svg, anchor);
@@ -3071,14 +3045,12 @@ function create_fragment(ctx) {
 			append_hydration(h2, t1);
 			append_hydration(div0, t2);
 			append_hydration(div0, form_1);
-			append_hydration(form_1, input);
-			append_hydration(form_1, t3);
 			append_hydration(form_1, button);
-			append_hydration(button, t4);
-			append_hydration(div0, t5);
+			append_hydration(button, t3);
+			append_hydration(div0, t4);
 			append_hydration(div0, span);
-			append_hydration(span, t6);
-			append_hydration(div2, t7);
+			append_hydration(span, t5);
+			append_hydration(div2, t6);
 			append_hydration(div2, div1);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -3091,13 +3063,8 @@ function create_fragment(ctx) {
 		},
 		p(ctx, [dirty]) {
 			if (!current || dirty & /*heading*/ 4) set_data(t1, /*heading*/ ctx[2]);
-
-			if (!current || dirty & /*form*/ 1 && input_placeholder_value !== (input_placeholder_value = /*form*/ ctx[0].placeholder)) {
-				attr(input, "placeholder", input_placeholder_value);
-			}
-
-			if ((!current || dirty & /*form*/ 1) && t4_value !== (t4_value = /*form*/ ctx[0].button_label + "")) set_data(t4, t4_value);
-			if ((!current || dirty & /*form*/ 1) && t6_value !== (t6_value = /*form*/ ctx[0].footer + "")) set_data(t6, t6_value);
+			if ((!current || dirty & /*form*/ 1) && t3_value !== (t3_value = /*form*/ ctx[0].button_label + "")) set_data(t3, t3_value);
+			if ((!current || dirty & /*form*/ 1) && t5_value !== (t5_value = /*form*/ ctx[0].footer + "")) set_data(t5, t5_value);
 
 			if (dirty & /*cards*/ 2) {
 				each_value = /*cards*/ ctx[1];
