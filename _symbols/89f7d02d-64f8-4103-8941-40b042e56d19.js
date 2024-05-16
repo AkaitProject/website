@@ -1,4 +1,4 @@
-// Footer - Updated May 16, 2024
+// Footer - Updated May 17, 2024
 function noop() { }
 function assign(tar, src) {
     // @ts-ignore
@@ -2899,7 +2899,7 @@ function create_each_block(ctx) {
 		h() {
 			attr(a, "href", a_href_value = /*link*/ ctx[3].url);
 			attr(a, "aria-label", a_aria_label_value = /*icon*/ ctx[4]);
-			attr(a, "class", "svelte-5m5swo");
+			attr(a, "class", "svelte-9bulpo");
 		},
 		m(target, anchor) {
 			insert_hydration(target, li, anchor);
@@ -2946,7 +2946,6 @@ function create_fragment(ctx) {
 	let a;
 	let t1;
 	let t2;
-	let t3;
 	let ul;
 	let current;
 	let each_value_1 = /*footer_nav*/ ctx[1];
@@ -2980,9 +2979,8 @@ function create_fragment(ctx) {
 			t0 = space();
 			span = element("span");
 			a = element("a");
-			t1 = text("Primo");
-			t2 = text(" Powered");
-			t3 = space();
+			t1 = text("© World Developers Team, 2024");
+			t2 = space();
 			ul = element("ul");
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -3009,11 +3007,10 @@ function create_fragment(ctx) {
 			var span_nodes = children(span);
 			a = claim_element(span_nodes, "A", { href: true, class: true });
 			var a_nodes = children(a);
-			t1 = claim_text(a_nodes, "Primo");
+			t1 = claim_text(a_nodes, "© World Developers Team, 2024");
 			a_nodes.forEach(detach);
-			t2 = claim_text(span_nodes, " Powered");
 			span_nodes.forEach(detach);
-			t3 = claim_space(div_nodes);
+			t2 = claim_space(div_nodes);
 			ul = claim_element(div_nodes, "UL", { class: true });
 			var ul_nodes = children(ul);
 
@@ -3027,13 +3024,13 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		h() {
-			attr(nav, "class", "svelte-5m5swo");
-			attr(a, "href", "https://primo.so");
-			attr(a, "class", "svelte-5m5swo");
-			attr(span, "class", "primo svelte-5m5swo");
-			attr(ul, "class", "svelte-5m5swo");
-			attr(div, "class", "section-container svelte-5m5swo");
-			attr(footer, "class", "svelte-5m5swo");
+			attr(nav, "class", "svelte-9bulpo");
+			attr(a, "href", "//github.com/WorldDevelopersTeam");
+			attr(a, "class", "svelte-9bulpo");
+			attr(span, "class", "copyright svelte-9bulpo");
+			attr(ul, "class", "svelte-9bulpo");
+			attr(div, "class", "section-container svelte-9bulpo");
+			attr(footer, "class", "svelte-9bulpo");
 		},
 		m(target, anchor) {
 			insert_hydration(target, footer, anchor);
@@ -3050,8 +3047,7 @@ function create_fragment(ctx) {
 			append_hydration(div, span);
 			append_hydration(span, a);
 			append_hydration(a, t1);
-			append_hydration(span, t2);
-			append_hydration(div, t3);
+			append_hydration(div, t2);
 			append_hydration(div, ul);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
