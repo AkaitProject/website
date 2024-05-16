@@ -2820,7 +2820,7 @@ function get_each_context_1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (61:6) {#each footer_nav as { link }}
+// (76:6) {#each footer_nav as { link }}
 function create_each_block_1(ctx) {
 	let a;
 	let t_value = /*link*/ ctx[3].label + "";
@@ -2860,7 +2860,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (67:6) {#each social as { link, icon }}
+// (82:6) {#each social as { link, icon }}
 function create_each_block(ctx) {
 	let li;
 	let a;
@@ -2899,7 +2899,7 @@ function create_each_block(ctx) {
 		h() {
 			attr(a, "href", a_href_value = /*link*/ ctx[3].url);
 			attr(a, "aria-label", a_aria_label_value = /*icon*/ ctx[4]);
-			attr(a, "class", "svelte-9bulpo");
+			attr(a, "class", "svelte-1q5miwu");
 		},
 		m(target, anchor) {
 			insert_hydration(target, li, anchor);
@@ -3024,13 +3024,13 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		h() {
-			attr(nav, "class", "svelte-9bulpo");
+			attr(nav, "class", "svelte-1q5miwu");
 			attr(a, "href", "//github.com/WorldDevelopersTeam");
-			attr(a, "class", "svelte-9bulpo");
-			attr(span, "class", "copyright svelte-9bulpo");
-			attr(ul, "class", "svelte-9bulpo");
-			attr(div, "class", "section-container svelte-9bulpo");
-			attr(footer, "class", "svelte-9bulpo");
+			attr(a, "class", "svelte-1q5miwu");
+			attr(span, "class", "copyright svelte-1q5miwu");
+			attr(ul, "class", "svelte-1q5miwu");
+			attr(div, "class", "section-container svelte-1q5miwu");
+			attr(footer, "class", "svelte-1q5miwu");
 		},
 		m(target, anchor) {
 			insert_hydration(target, footer, anchor);
