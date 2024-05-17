@@ -3217,7 +3217,7 @@ function create_each_block_3(ctx) {
 // (143:8) {#each cta as { link }
 function create_each_block_2(ctx) {
 	let a;
-	let t_value = /*link*/ ctx[8].label + "";
+	let t_value = /*link*/ ctx[8].icon + "";
 	let t;
 	let a_href_value;
 
@@ -3243,7 +3243,7 @@ function create_each_block_2(ctx) {
 			append_hydration(a, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*cta*/ 1 && t_value !== (t_value = /*link*/ ctx[8].label + "")) set_data(t, t_value);
+			if (dirty & /*cta*/ 1 && t_value !== (t_value = /*link*/ ctx[8].icon + "")) set_data(t, t_value);
 
 			if (dirty & /*cta*/ 1 && a_href_value !== (a_href_value = /*link*/ ctx[8].url)) {
 				attr(a, "href", a_href_value);
