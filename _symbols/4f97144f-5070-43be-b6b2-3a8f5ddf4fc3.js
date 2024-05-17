@@ -3109,7 +3109,7 @@ function get_each_context_3(ctx, list, i) {
 	return child_ctx;
 }
 
-// (192:8) {:else}
+// (194:8) {:else}
 function create_else_block_3(ctx) {
 	let span;
 	let t_value = /*logo*/ ctx[1].title + "";
@@ -3139,7 +3139,7 @@ function create_else_block_3(ctx) {
 	};
 }
 
-// (190:8) {#if logo.image.url}
+// (192:8) {#if logo.image.url}
 function create_if_block_4(ctx) {
 	let img;
 	let img_src_value;
@@ -3176,7 +3176,7 @@ function create_if_block_4(ctx) {
 	};
 }
 
-// (197:8) {#each site_nav as { link }}
+// (199:8) {#each site_nav as { link }}
 function create_each_block_3(ctx) {
 	let a;
 	let t_value = /*link*/ ctx[8].label + "";
@@ -3197,7 +3197,7 @@ function create_each_block_3(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "nav-item svelte-10vl1oy");
+			attr(a, "class", "nav-item svelte-1vy3oss");
 			attr(a, "href", a_href_value = /*link*/ ctx[8].url);
 		},
 		m(target, anchor) {
@@ -3217,7 +3217,7 @@ function create_each_block_3(ctx) {
 	};
 }
 
-// (212:10) {:else}
+// (214:10) {:else}
 function create_else_block_2(ctx) {
 	let a;
 	let t_value = /*link*/ ctx[8].label + "";
@@ -3238,7 +3238,7 @@ function create_else_block_2(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "button label-button svelte-10vl1oy");
+			attr(a, "class", "button label-button svelte-1vy3oss");
 			attr(a, "href", a_href_value = /*link*/ ctx[8].url);
 		},
 		m(target, anchor) {
@@ -3260,7 +3260,7 @@ function create_else_block_2(ctx) {
 	};
 }
 
-// (202:10) {#if icon}
+// (204:10) {#if icon}
 function create_if_block_2(ctx) {
 	let current_block_type_index;
 	let if_block;
@@ -3334,7 +3334,7 @@ function create_if_block_2(ctx) {
 	};
 }
 
-// (207:10) {:else}
+// (209:10) {:else}
 function create_else_block_1(ctx) {
 	let a;
 	let icon;
@@ -3356,7 +3356,7 @@ function create_else_block_1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "button icon-button svelte-10vl1oy");
+			attr(a, "class", "button icon-button svelte-1vy3oss");
 			attr(a, "href", a_href_value = /*link*/ ctx[8].url);
 		},
 		m(target, anchor) {
@@ -3389,7 +3389,7 @@ function create_else_block_1(ctx) {
 	};
 }
 
-// (203:10) {#if mode === "popup"}
+// (205:10) {#if mode === "popup"}
 function create_if_block_3(ctx) {
 	let a;
 	let icon;
@@ -3411,7 +3411,7 @@ function create_if_block_3(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "class", "button icon-button svelte-10vl1oy");
+			attr(a, "class", "button icon-button svelte-1vy3oss");
 			attr(a, "href", "/#");
 			attr(a, "onclick", a_onclick_value = "window.open('" + /*link*/ ctx[8].url + "','_blank','width=1,height=1');return false;");
 		},
@@ -3445,7 +3445,7 @@ function create_if_block_3(ctx) {
 	};
 }
 
-// (201:8) {#each cta as { link, icon, mode }
+// (203:8) {#each cta as { link, icon, mode }
 function create_each_block_2(ctx) {
 	let current_block_type_index;
 	let if_block;
@@ -3519,7 +3519,7 @@ function create_each_block_2(ctx) {
 	};
 }
 
-// (226:4) {#if mobileNavOpen}
+// (228:4) {#if mobileNavOpen}
 function create_if_block(ctx) {
 	let nav;
 	let hr0;
@@ -3618,13 +3618,13 @@ function create_if_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(hr0, "class", "svelte-10vl1oy");
-			attr(hr1, "class", "svelte-10vl1oy");
+			attr(hr0, "class", "svelte-1vy3oss");
+			attr(hr1, "class", "svelte-1vy3oss");
 			attr(button, "id", "close");
 			attr(button, "aria-label", "Close Navigation");
-			attr(button, "class", "svelte-10vl1oy");
+			attr(button, "class", "svelte-1vy3oss");
 			attr(nav, "id", "mobile-nav");
-			attr(nav, "class", "svelte-10vl1oy");
+			attr(nav, "class", "svelte-1vy3oss");
 		},
 		m(target, anchor) {
 			insert_hydration(target, nav, anchor);
@@ -3749,7 +3749,7 @@ function create_if_block(ctx) {
 	};
 }
 
-// (229:8) {#each site_nav as { link }}
+// (231:8) {#each site_nav as { link }}
 function create_each_block_1(ctx) {
 	let a;
 	let t_value = /*link*/ ctx[8].label + "";
@@ -3771,7 +3771,7 @@ function create_each_block_1(ctx) {
 		},
 		h() {
 			attr(a, "href", a_href_value = /*link*/ ctx[8].url);
-			attr(a, "class", "svelte-10vl1oy");
+			attr(a, "class", "svelte-1vy3oss");
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
@@ -3790,7 +3790,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (233:8) {#each cta as { link, icon }
+// (235:8) {#each cta as { link, icon }
 function create_each_block(ctx) {
 	let a;
 	let t_value = /*link*/ ctx[8].label + "";
@@ -3813,7 +3813,7 @@ function create_each_block(ctx) {
 		h() {
 			attr(a, "href", a_href_value = /*link*/ ctx[8].url);
 			attr(a, "target", "_blank");
-			attr(a, "class", "svelte-10vl1oy");
+			attr(a, "class", "svelte-1vy3oss");
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
@@ -3832,7 +3832,7 @@ function create_each_block(ctx) {
 	};
 }
 
-// (238:8) {:else}
+// (240:8) {:else}
 function create_else_block(ctx) {
 	let span;
 	let t_value = /*logo*/ ctx[1].title + "";
@@ -3852,7 +3852,7 @@ function create_else_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(span, "class", "logo svelte-10vl1oy");
+			attr(span, "class", "logo svelte-1vy3oss");
 		},
 		m(target, anchor) {
 			insert_hydration(target, span, anchor);
@@ -3867,7 +3867,7 @@ function create_else_block(ctx) {
 	};
 }
 
-// (236:8) {#if logo.image.url}
+// (238:8) {#if logo.image.url}
 function create_if_block_1(ctx) {
 	let img;
 	let img_src_value;
@@ -3883,7 +3883,7 @@ function create_if_block_1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(img, "class", "logo svelte-10vl1oy");
+			attr(img, "class", "logo svelte-1vy3oss");
 			if (!src_url_equal(img.src, img_src_value = /*logo*/ ctx[1].image.url)) attr(img, "src", img_src_value);
 			attr(img, "alt", img_alt_value = /*logo*/ ctx[1].image.alt);
 		},
@@ -4030,16 +4030,16 @@ function create_fragment(ctx) {
 		},
 		h() {
 			attr(a, "href", "/");
-			attr(a, "class", "logo svelte-10vl1oy");
+			attr(a, "class", "logo svelte-1vy3oss");
 			set_style(a, "--size", style___size);
-			attr(div0, "class", "nav-divider svelte-10vl1oy");
+			attr(div0, "class", "nav-divider svelte-1vy3oss");
 			attr(button, "id", "open");
 			attr(button, "aria-label", "Открыть навигацию");
-			attr(button, "class", "svelte-10vl1oy");
-			attr(nav, "class", "svelte-10vl1oy");
-			attr(div1, "class", "desktop-nav svelte-10vl1oy");
-			attr(div2, "class", "section-container svelte-10vl1oy");
-			attr(header, "class", "svelte-10vl1oy");
+			attr(button, "class", "svelte-1vy3oss");
+			attr(nav, "class", "svelte-1vy3oss");
+			attr(div1, "class", "desktop-nav svelte-1vy3oss");
+			attr(div2, "class", "section-container svelte-1vy3oss");
+			attr(header, "class", "svelte-1vy3oss");
 		},
 		m(target, anchor) {
 			insert_hydration(target, header, anchor);
