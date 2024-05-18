@@ -2820,7 +2820,7 @@ function get_each_context_1(ctx, list, i) {
 	return child_ctx;
 }
 
-// (73:6) {#each footer_nav as { link }}
+// (75:6) {#each footer_nav as { link }}
 function create_each_block_1(ctx) {
 	let a;
 	let t_value = /*link*/ ctx[3].label + "";
@@ -2842,7 +2842,7 @@ function create_each_block_1(ctx) {
 		},
 		h() {
 			attr(a, "href", a_href_value = /*link*/ ctx[3].url);
-			attr(a, "class", "svelte-15gu7wo");
+			attr(a, "class", "svelte-hb9pms");
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
@@ -2861,7 +2861,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (78:6) {#each social as { link, icon }}
+// (80:6) {#each social as { link, icon }}
 function create_each_block(ctx) {
 	let li;
 	let a;
@@ -2900,7 +2900,7 @@ function create_each_block(ctx) {
 		h() {
 			attr(a, "href", a_href_value = /*link*/ ctx[3].url);
 			attr(a, "aria-label", a_aria_label_value = /*icon*/ ctx[4]);
-			attr(a, "class", "svelte-15gu7wo");
+			attr(a, "class", "svelte-hb9pms");
 		},
 		m(target, anchor) {
 			insert_hydration(target, li, anchor);
@@ -3020,11 +3020,11 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		h() {
-			attr(span, "class", "copyright svelte-15gu7wo");
-			attr(nav, "class", "svelte-15gu7wo");
-			attr(ul, "class", "svelte-15gu7wo");
-			attr(div, "class", "section-container svelte-15gu7wo");
-			attr(footer, "class", "svelte-15gu7wo");
+			attr(span, "class", "copyright svelte-hb9pms");
+			attr(nav, "class", "svelte-hb9pms");
+			attr(ul, "class", "svelte-hb9pms");
+			attr(div, "class", "section-container svelte-hb9pms");
+			attr(footer, "class", "svelte-hb9pms");
 		},
 		m(target, anchor) {
 			insert_hydration(target, footer, anchor);
