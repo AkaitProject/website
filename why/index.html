@@ -2,7 +2,7 @@
   <html lang="en">
     <head>
       <meta name="generator" content="Wdt" />
-      <!-- HEAD_svelte-1bazmjh_START --><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="UTF-8"><link rel="preconnect" href="https://fonts.bunny.net"><link href="https://fonts.bunny.net/css?family=roboto:300,400,500,600,700" rel="stylesheet"><link rel="icon" type="image/png" sizes="32x32" href="https://wiuobdoxrhygumreqodx.supabase.co/storage/v1/object/public/images/41dbd844-f046-46f8-a634-fa0e517bdcad/1715882786638undefined.webp"><style>/* Reset & standardize default styles */
+      <!-- HEAD_svelte-1vlpurq_START --><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="UTF-8"><link rel="preconnect" href="https://fonts.bunny.net"><link href="https://fonts.bunny.net/css?family=roboto:300,400,500,600,700" rel="stylesheet"><link rel="icon" type="image/png" sizes="32x32" href="https://wiuobdoxrhygumreqodx.supabase.co/storage/v1/object/public/images/41dbd844-f046-46f8-a634-fa0e517bdcad/1715882786638undefined.webp"><style>/* Reset & standardize default styles */
 @import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
 
 /* Design tokens (apply to components) */
@@ -116,6 +116,10 @@ html {
 }
 
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   color: var(--color-brand, white);
   background: var(--color-inverted);
   border: 2px solid var(--color-brand);
@@ -136,6 +140,17 @@ html {
     border-color: #0d2436;
   }
 
+.button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+@media (min-width: 800px) {
+    .button:has(> span) svg {
+      display: none;
+    }
+}
+
 .link {
   font-size: 1.125rem;
   font-weight: 400;
@@ -149,7 +164,7 @@ html {
 .link:hover .arrow {
     transform: translateX(4px);
   }
-</style><!-- HEAD_svelte-1bazmjh_END -->
+</style><!-- HEAD_svelte-1vlpurq_END -->
       <style>@import url("https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css");header.svelte-1278ou.svelte-1278ou.svelte-1278ou{border-bottom:1px solid var(--border-color)}.section.svelte-1278ou.svelte-1278ou.svelte-1278ou{position:fixed;margin:0 auto;top:0;z-index:2;width:100%;border-radius:0}.section-container.svelte-1278ou.svelte-1278ou.svelte-1278ou{display:flex;justify-content:space-between;align-items:center;padding:4px 16px}.desktop-nav.svelte-1278ou.svelte-1278ou.svelte-1278ou{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;width:100%;height:41px}@media(min-width: 800px){.desktop-nav.svelte-1278ou.svelte-1278ou.svelte-1278ou{justify-content:start
 }}.desktop-nav.svelte-1278ou .logo.svelte-1278ou.svelte-1278ou{font-size:1.5rem;font-weight:600;line-height:1.4;margin-right:1.5rem;width:var(--size)}.desktop-nav.svelte-1278ou nav.svelte-1278ou.svelte-1278ou{display:flex;align-items:center;gap:2.5rem;flex:1}.desktop-nav.svelte-1278ou nav.svelte-1278ou a.svelte-1278ou{font-size:calc(1rem - 1px);font-weight:400;display:none;letter-spacing:0.0125rem}.desktop-nav.svelte-1278ou nav a.nav-item.svelte-1278ou.svelte-1278ou{color:#818c99;border-bottom:2px solid transparent;transition:border-color 0.1s;white-space:nowrap}@media(min-width: 800px){.desktop-nav.svelte-1278ou nav a.nav-item.svelte-1278ou.svelte-1278ou{margin-bottom:-2px
     }}.desktop-nav.svelte-1278ou nav a.nav-item.svelte-1278ou.svelte-1278ou:hover{color:var(--color-base);border-color:var(--color-brand)}.desktop-nav.svelte-1278ou nav .nav-divider.svelte-1278ou.svelte-1278ou{margin-right:auto}.desktop-nav.svelte-1278ou nav a.icon-button.svelte-1278ou.svelte-1278ou{font-size:1.15rem;padding:6px 18px}.desktop-nav.svelte-1278ou button#open.svelte-1278ou.svelte-1278ou{color:var(--color-brand);font-size:1.75rem;margin-left:auto}nav#mobile-nav.svelte-1278ou.svelte-1278ou.svelte-1278ou{font-size:1rem;position:absolute;flex-direction:column;text-align:left;background-color:var(--background-color, white);box-shadow:var(--box-shadow);border-radius:var(--border-radius);left:0.5rem;top:0.5rem;right:0.5rem;padding:2rem 0 1rem 0;height:41px}nav#mobile-nav.svelte-1278ou .logo.svelte-1278ou.svelte-1278ou{display:block;position:absolute;left:1rem;top:1rem;font-size:1.5rem}nav#mobile-nav.svelte-1278ou img.logo.svelte-1278ou.svelte-1278ou{max-height:25px}nav#mobile-nav.svelte-1278ou a.svelte-1278ou.svelte-1278ou{display:block;padding:1rem 2rem 1rem 2rem}nav#mobile-nav.svelte-1278ou a.svelte-1278ou.svelte-1278ou:first-of-type{margin-top:0.5rem}nav#mobile-nav.svelte-1278ou hr.svelte-1278ou.svelte-1278ou{margin:0.5rem 2rem;border-top-color:var(--color-shade);opacity:0.6}nav#mobile-nav.svelte-1278ou hr.svelte-1278ou.svelte-1278ou:first-child{margin:1.5rem 0 0 0;opacity:0.3}nav#mobile-nav.svelte-1278ou button#close.svelte-1278ou.svelte-1278ou{display:block;position:absolute;right:1rem;top:1rem;font-size:1.75rem;color:var(--color-brand)}@media(min-width: 800px){#open.svelte-1278ou.svelte-1278ou.svelte-1278ou,#mobile-nav.svelte-1278ou.svelte-1278ou.svelte-1278ou{display:none}.desktop-nav.svelte-1278ou nav.svelte-1278ou a.svelte-1278ou{display:inline-block}}.section:nth-of-type(2){margin-top:50px;border-top-left-radius:0;border-top-right-radius:0}
@@ -169,9 +184,7 @@ header.svelte-oai1pc.svelte-oai1pc{color:var(--color-inverted);position:relative
         <button id="open" aria-label="Открыть меню" class="svelte-1278ou"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 20 20" class="iconify iconify--heroicons-solid"><!-- HTML_TAG_START --><path fill="currentColor" fill-rule="evenodd" d="M3 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1m0 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1m0 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1" clip-rule="evenodd"/><!-- HTML_TAG_END --></svg></button></nav></div>
     </div></header></div> 
 <div class="section" id="section-b16feccb"><header class=" svelte-oai1pc"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80" alt="" class="svelte-oai1pc">
-  <div class="heading-group svelte-oai1pc"><h1 class="heading svelte-oai1pc">
-Why Cali
-</h1>
+  <div class="heading-group svelte-oai1pc"><h1 class="heading svelte-oai1pc">Why Cali</h1>
     <span class="subheading svelte-oai1pc">We're pioneering in the calendar scheduling world. We're way ahead of the game and we want to help make you more productive.</span>
     <div class="buttons svelte-oai1pc"></div></div>
   </header></div> 
@@ -180,10 +193,10 @@ Why Cali
 <section><div class="section-container svelte-18rfn6l"><div class="contact svelte-18rfn6l"><h2 class="heading">We're moving fast, signup for updates and more.</h2>
       <form action="" class="svelte-18rfn6l"><button type="button" class="svelte-18rfn6l">Submit</button></form>
       <span class="footer svelte-18rfn6l">We'll send you bi-weekly emails about our new features.</span></div>
-    <div class="cards svelte-18rfn6l"><div class="card svelte-18rfn6l"><div class="icon svelte-18rfn6l"></div>
+    <div class="cards svelte-18rfn6l"><div class="card svelte-18rfn6l"><div class="icon svelte-18rfn6l"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START --><path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8z"/><!-- HTML_TAG_END --></svg></div>
           <span class="title svelte-18rfn6l">User friendly &amp; fun</span>
           <span class="description svelte-18rfn6l">With a clear intuitive interface, you can easily add and view events.</span>
-        </div><div class="card svelte-18rfn6l"><div class="icon svelte-18rfn6l"></div>
+        </div><div class="card svelte-18rfn6l"><div class="icon svelte-18rfn6l"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START --><path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8z"/><!-- HTML_TAG_END --></svg></div>
           <span class="title svelte-18rfn6l">Responsive and speedy</span>
           <span class="description svelte-18rfn6l">Our desktop and web application are both super speedy.</span>
         </div></div></div></section></div> 
