@@ -2843,7 +2843,7 @@ function create_if_block_1(ctx) {
 		},
 		h() {
 			attr(a, "href", a_href_value = /*link*/ ctx[0].url);
-			attr(a, "class", "button with_icon svelte-1nwd9tq");
+			attr(a, "class", "button with_icon svelte-14tfygb");
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
@@ -2879,7 +2879,7 @@ function create_if_block_1(ctx) {
 	};
 }
 
-// (129:4) {#if subheading}
+// (126:4) {#if subheading}
 function create_if_block(ctx) {
 	let div;
 	let t;
@@ -2898,7 +2898,7 @@ function create_if_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(div, "class", "subheading svelte-1nwd9tq");
+			attr(div, "class", "subheading svelte-14tfygb");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div, anchor);
@@ -2916,16 +2916,21 @@ function create_if_block(ctx) {
 function create_fragment(ctx) {
 	let section;
 	let div1;
+	let figure0;
+	let img0;
+	let img0_src_value;
+	let img0_alt_value;
+	let t0;
 	let div0;
 	let h1;
-	let t0;
 	let t1;
 	let t2;
-	let figure;
-	let img;
-	let img_src_value;
-	let img_alt_value;
 	let t3;
+	let figure1;
+	let img1;
+	let img1_src_value;
+	let img1_alt_value;
+	let t4;
 	let current;
 	let if_block0 = /*link*/ ctx[0].label && create_if_block_1(ctx);
 	let if_block1 = /*subheading*/ ctx[4] && create_if_block(ctx);
@@ -2934,15 +2939,18 @@ function create_fragment(ctx) {
 		c() {
 			section = element("section");
 			div1 = element("div");
+			figure0 = element("figure");
+			img0 = element("img");
+			t0 = space();
 			div0 = element("div");
 			h1 = element("h1");
-			t0 = text(/*heading*/ ctx[2]);
-			t1 = space();
-			if (if_block0) if_block0.c();
+			t1 = text(/*heading*/ ctx[2]);
 			t2 = space();
-			figure = element("figure");
-			img = element("img");
+			if (if_block0) if_block0.c();
 			t3 = space();
+			figure1 = element("figure");
+			img1 = element("img");
+			t4 = space();
 			if (if_block1) if_block1.c();
 			this.h();
 		},
@@ -2951,53 +2959,73 @@ function create_fragment(ctx) {
 			var section_nodes = children(section);
 			div1 = claim_element(section_nodes, "DIV", { class: true });
 			var div1_nodes = children(div1);
+			figure0 = claim_element(div1_nodes, "FIGURE", { class: true });
+			var figure0_nodes = children(figure0);
+			img0 = claim_element(figure0_nodes, "IMG", { src: true, alt: true, class: true });
+			figure0_nodes.forEach(detach);
+			t0 = claim_space(div1_nodes);
 			div0 = claim_element(div1_nodes, "DIV", { class: true });
 			var div0_nodes = children(div0);
 			h1 = claim_element(div0_nodes, "H1", { class: true });
 			var h1_nodes = children(h1);
-			t0 = claim_text(h1_nodes, /*heading*/ ctx[2]);
+			t1 = claim_text(h1_nodes, /*heading*/ ctx[2]);
 			h1_nodes.forEach(detach);
-			t1 = claim_space(div0_nodes);
+			t2 = claim_space(div0_nodes);
 			if (if_block0) if_block0.l(div0_nodes);
 			div0_nodes.forEach(detach);
-			t2 = claim_space(div1_nodes);
-			figure = claim_element(div1_nodes, "FIGURE", { class: true });
-			var figure_nodes = children(figure);
-			img = claim_element(figure_nodes, "IMG", { src: true, alt: true, class: true });
-			figure_nodes.forEach(detach);
 			t3 = claim_space(div1_nodes);
+			figure1 = claim_element(div1_nodes, "FIGURE", { class: true });
+			var figure1_nodes = children(figure1);
+			img1 = claim_element(figure1_nodes, "IMG", { src: true, alt: true, class: true });
+			figure1_nodes.forEach(detach);
+			t4 = claim_space(div1_nodes);
 			if (if_block1) if_block1.l(div1_nodes);
 			div1_nodes.forEach(detach);
 			section_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
-			attr(h1, "class", "headline svelte-1nwd9tq");
-			attr(div0, "class", "body svelte-1nwd9tq");
-			if (!src_url_equal(img.src, img_src_value = /*image*/ ctx[1].url)) attr(img, "src", img_src_value);
-			attr(img, "alt", img_alt_value = /*image*/ ctx[1].alt);
-			attr(img, "class", "svelte-1nwd9tq");
-			attr(figure, "class", "svelte-1nwd9tq");
-			attr(div1, "class", "section-container svelte-1nwd9tq");
-			attr(section, "class", "svelte-1nwd9tq");
+			if (!src_url_equal(img0.src, img0_src_value = /*image_big*/ ctx[5].url)) attr(img0, "src", img0_src_value);
+			attr(img0, "alt", img0_alt_value = /*image_big*/ ctx[5].alt);
+			attr(img0, "class", "svelte-14tfygb");
+			attr(figure0, "class", "feedback-big svelte-14tfygb");
+			attr(h1, "class", "headline svelte-14tfygb");
+			attr(div0, "class", "body svelte-14tfygb");
+			if (!src_url_equal(img1.src, img1_src_value = /*image*/ ctx[1].url)) attr(img1, "src", img1_src_value);
+			attr(img1, "alt", img1_alt_value = /*image*/ ctx[1].alt);
+			attr(img1, "class", "svelte-14tfygb");
+			attr(figure1, "class", "feedback svelte-14tfygb");
+			attr(div1, "class", "section-container svelte-14tfygb");
+			attr(section, "class", "svelte-14tfygb");
 		},
 		m(target, anchor) {
 			insert_hydration(target, section, anchor);
 			append_hydration(section, div1);
+			append_hydration(div1, figure0);
+			append_hydration(figure0, img0);
+			append_hydration(div1, t0);
 			append_hydration(div1, div0);
 			append_hydration(div0, h1);
-			append_hydration(h1, t0);
-			append_hydration(div0, t1);
+			append_hydration(h1, t1);
+			append_hydration(div0, t2);
 			if (if_block0) if_block0.m(div0, null);
-			append_hydration(div1, t2);
-			append_hydration(div1, figure);
-			append_hydration(figure, img);
 			append_hydration(div1, t3);
+			append_hydration(div1, figure1);
+			append_hydration(figure1, img1);
+			append_hydration(div1, t4);
 			if (if_block1) if_block1.m(div1, null);
 			current = true;
 		},
 		p(ctx, [dirty]) {
-			if (!current || dirty & /*heading*/ 4) set_data(t0, /*heading*/ ctx[2]);
+			if (!current || dirty & /*image_big*/ 32 && !src_url_equal(img0.src, img0_src_value = /*image_big*/ ctx[5].url)) {
+				attr(img0, "src", img0_src_value);
+			}
+
+			if (!current || dirty & /*image_big*/ 32 && img0_alt_value !== (img0_alt_value = /*image_big*/ ctx[5].alt)) {
+				attr(img0, "alt", img0_alt_value);
+			}
+
+			if (!current || dirty & /*heading*/ 4) set_data(t1, /*heading*/ ctx[2]);
 
 			if (/*link*/ ctx[0].label) {
 				if (if_block0) {
@@ -3022,12 +3050,12 @@ function create_fragment(ctx) {
 				check_outros();
 			}
 
-			if (!current || dirty & /*image*/ 2 && !src_url_equal(img.src, img_src_value = /*image*/ ctx[1].url)) {
-				attr(img, "src", img_src_value);
+			if (!current || dirty & /*image*/ 2 && !src_url_equal(img1.src, img1_src_value = /*image*/ ctx[1].url)) {
+				attr(img1, "src", img1_src_value);
 			}
 
-			if (!current || dirty & /*image*/ 2 && img_alt_value !== (img_alt_value = /*image*/ ctx[1].alt)) {
-				attr(img, "alt", img_alt_value);
+			if (!current || dirty & /*image*/ 2 && img1_alt_value !== (img1_alt_value = /*image*/ ctx[1].alt)) {
+				attr(img1, "alt", img1_alt_value);
 			}
 
 			if (/*subheading*/ ctx[4]) {
@@ -3067,17 +3095,19 @@ function instance($$self, $$props, $$invalidate) {
 	let { heading } = $$props;
 	let { link_icon } = $$props;
 	let { subheading } = $$props;
+	let { image_big } = $$props;
 
 	$$self.$$set = $$props => {
-		if ('props' in $$props) $$invalidate(5, props = $$props.props);
+		if ('props' in $$props) $$invalidate(6, props = $$props.props);
 		if ('link' in $$props) $$invalidate(0, link = $$props.link);
 		if ('image' in $$props) $$invalidate(1, image = $$props.image);
 		if ('heading' in $$props) $$invalidate(2, heading = $$props.heading);
 		if ('link_icon' in $$props) $$invalidate(3, link_icon = $$props.link_icon);
 		if ('subheading' in $$props) $$invalidate(4, subheading = $$props.subheading);
+		if ('image_big' in $$props) $$invalidate(5, image_big = $$props.image_big);
 	};
 
-	return [link, image, heading, link_icon, subheading, props];
+	return [link, image, heading, link_icon, subheading, image_big, props];
 }
 
 class Component extends SvelteComponent {
@@ -3085,12 +3115,13 @@ class Component extends SvelteComponent {
 		super();
 
 		init(this, options, instance, create_fragment, safe_not_equal, {
-			props: 5,
+			props: 6,
 			link: 0,
 			image: 1,
 			heading: 2,
 			link_icon: 3,
-			subheading: 4
+			subheading: 4,
+			image_big: 5
 		});
 	}
 }
