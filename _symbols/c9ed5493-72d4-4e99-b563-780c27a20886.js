@@ -2818,7 +2818,7 @@ function create_if_block(ctx) {
 	let t1;
 	let a_href_value;
 	let current;
-	icon = new Component$1({ props: { icon: /*link_icon*/ ctx[3] } });
+	icon = new Component$1({ props: { icon: /*link_icon*/ ctx[2] } });
 
 	return {
 		c() {
@@ -2855,7 +2855,7 @@ function create_if_block(ctx) {
 		},
 		p(ctx, dirty) {
 			const icon_changes = {};
-			if (dirty & /*link_icon*/ 8) icon_changes.icon = /*link_icon*/ ctx[3];
+			if (dirty & /*link_icon*/ 4) icon_changes.icon = /*link_icon*/ ctx[2];
 			icon.$set(icon_changes);
 			if ((!current || dirty & /*link*/ 1) && t1_value !== (t1_value = /*link*/ ctx[0].label + "")) set_data(t1, t1_value);
 
@@ -2960,16 +2960,16 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		h() {
-			if (!src_url_equal(img0.src, img0_src_value = /*image_left*/ ctx[5].url)) attr(img0, "src", img0_src_value);
+			if (!src_url_equal(img0.src, img0_src_value = /*image_left*/ ctx[3].url)) attr(img0, "src", img0_src_value);
 			attr(img0, "class", "svelte-1v8viqy");
 			attr(figure0, "class", "elements-left svelte-1v8viqy");
-			if (!src_url_equal(img1.src, img1_src_value = /*image_center*/ ctx[4].url)) attr(img1, "src", img1_src_value);
+			if (!src_url_equal(img1.src, img1_src_value = /*image_center*/ ctx[6].url)) attr(img1, "src", img1_src_value);
 			attr(img1, "class", "svelte-1v8viqy");
 			attr(figure1, "class", "elements-center svelte-1v8viqy");
 			attr(h1, "class", "headline svelte-1v8viqy");
 			attr(div0, "class", "subheading svelte-1v8viqy");
 			attr(div1, "class", "body svelte-1v8viqy");
-			if (!src_url_equal(img2.src, img2_src_value = /*image_right*/ ctx[6].url)) attr(img2, "src", img2_src_value);
+			if (!src_url_equal(img2.src, img2_src_value = /*image_right*/ ctx[5].url)) attr(img2, "src", img2_src_value);
 			attr(img2, "class", "svelte-1v8viqy");
 			attr(figure2, "class", "elements-right svelte-1v8viqy");
 			attr(div2, "class", "section-container svelte-1v8viqy");
@@ -2989,7 +2989,7 @@ function create_fragment(ctx) {
 			h1.innerHTML = /*heading*/ ctx[1];
 			append_hydration(div1, t2);
 			append_hydration(div1, div0);
-			div0.innerHTML = /*subheading*/ ctx[2];
+			div0.innerHTML = /*subheading*/ ctx[4];
 			append_hydration(div1, t3);
 			if (if_block) if_block.m(div1, null);
 			append_hydration(div2, t4);
@@ -2998,15 +2998,15 @@ function create_fragment(ctx) {
 			current = true;
 		},
 		p(ctx, [dirty]) {
-			if (!current || dirty & /*image_left*/ 32 && !src_url_equal(img0.src, img0_src_value = /*image_left*/ ctx[5].url)) {
+			if (!current || dirty & /*image_left*/ 8 && !src_url_equal(img0.src, img0_src_value = /*image_left*/ ctx[3].url)) {
 				attr(img0, "src", img0_src_value);
 			}
 
-			if (!current || dirty & /*image_center*/ 16 && !src_url_equal(img1.src, img1_src_value = /*image_center*/ ctx[4].url)) {
+			if (!current || dirty & /*image_center*/ 64 && !src_url_equal(img1.src, img1_src_value = /*image_center*/ ctx[6].url)) {
 				attr(img1, "src", img1_src_value);
 			}
 
-			if (!current || dirty & /*heading*/ 2) h1.innerHTML = /*heading*/ ctx[1];			if (!current || dirty & /*subheading*/ 4) div0.innerHTML = /*subheading*/ ctx[2];
+			if (!current || dirty & /*heading*/ 2) h1.innerHTML = /*heading*/ ctx[1];			if (!current || dirty & /*subheading*/ 16) div0.innerHTML = /*subheading*/ ctx[4];
 			if (/*link*/ ctx[0].label) {
 				if (if_block) {
 					if_block.p(ctx, dirty);
@@ -3030,7 +3030,7 @@ function create_fragment(ctx) {
 				check_outros();
 			}
 
-			if (!current || dirty & /*image_right*/ 64 && !src_url_equal(img2.src, img2_src_value = /*image_right*/ ctx[6].url)) {
+			if (!current || dirty & /*image_right*/ 32 && !src_url_equal(img2.src, img2_src_value = /*image_right*/ ctx[5].url)) {
 				attr(img2, "src", img2_src_value);
 			}
 		},
@@ -3054,31 +3054,31 @@ function instance($$self, $$props, $$invalidate) {
 	let { props } = $$props;
 	let { link } = $$props;
 	let { heading } = $$props;
-	let { subheading } = $$props;
 	let { link_icon } = $$props;
-	let { image_center } = $$props;
 	let { image_left } = $$props;
+	let { subheading } = $$props;
 	let { image_right } = $$props;
+	let { image_center } = $$props;
 
 	$$self.$$set = $$props => {
 		if ('props' in $$props) $$invalidate(7, props = $$props.props);
 		if ('link' in $$props) $$invalidate(0, link = $$props.link);
 		if ('heading' in $$props) $$invalidate(1, heading = $$props.heading);
-		if ('subheading' in $$props) $$invalidate(2, subheading = $$props.subheading);
-		if ('link_icon' in $$props) $$invalidate(3, link_icon = $$props.link_icon);
-		if ('image_center' in $$props) $$invalidate(4, image_center = $$props.image_center);
-		if ('image_left' in $$props) $$invalidate(5, image_left = $$props.image_left);
-		if ('image_right' in $$props) $$invalidate(6, image_right = $$props.image_right);
+		if ('link_icon' in $$props) $$invalidate(2, link_icon = $$props.link_icon);
+		if ('image_left' in $$props) $$invalidate(3, image_left = $$props.image_left);
+		if ('subheading' in $$props) $$invalidate(4, subheading = $$props.subheading);
+		if ('image_right' in $$props) $$invalidate(5, image_right = $$props.image_right);
+		if ('image_center' in $$props) $$invalidate(6, image_center = $$props.image_center);
 	};
 
 	return [
 		link,
 		heading,
-		subheading,
 		link_icon,
-		image_center,
 		image_left,
+		subheading,
 		image_right,
+		image_center,
 		props
 	];
 }
@@ -3091,11 +3091,11 @@ class Component extends SvelteComponent {
 			props: 7,
 			link: 0,
 			heading: 1,
-			subheading: 2,
-			link_icon: 3,
-			image_center: 4,
-			image_left: 5,
-			image_right: 6
+			link_icon: 2,
+			image_left: 3,
+			subheading: 4,
+			image_right: 5,
+			image_center: 6
 		});
 	}
 }
