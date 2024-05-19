@@ -2843,7 +2843,7 @@ function create_if_block(ctx) {
 		},
 		h() {
 			attr(a, "href", a_href_value = /*link*/ ctx[0].url);
-			attr(a, "class", "button with_icon svelte-1a9ni8z");
+			attr(a, "class", "button with_icon svelte-174wsn0");
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
@@ -2961,19 +2961,19 @@ function create_fragment(ctx) {
 		},
 		h() {
 			if (!src_url_equal(img0.src, img0_src_value = /*promo_big*/ ctx[3].url)) attr(img0, "src", img0_src_value);
-			attr(img0, "class", "svelte-1a9ni8z");
-			attr(figure0, "class", "promo-big svelte-1a9ni8z");
+			attr(img0, "class", "svelte-174wsn0");
+			attr(figure0, "class", "promo-big svelte-174wsn0");
 			if (!src_url_equal(img1.src, img1_src_value = /*promo_left*/ ctx[4].url)) attr(img1, "src", img1_src_value);
-			attr(img1, "class", "svelte-1a9ni8z");
-			attr(figure1, "class", "promo-left svelte-1a9ni8z");
-			attr(h1, "class", "headline svelte-1a9ni8z");
-			attr(div0, "class", "subheading svelte-1a9ni8z");
-			attr(div1, "class", "body svelte-1a9ni8z");
+			attr(img1, "class", "svelte-174wsn0");
+			attr(figure1, "class", "promo-left svelte-174wsn0");
+			attr(h1, "class", "headline svelte-174wsn0");
+			attr(div0, "class", "subheading svelte-174wsn0");
+			attr(div1, "class", "body svelte-174wsn0");
 			if (!src_url_equal(img2.src, img2_src_value = /*promo_right*/ ctx[6].url)) attr(img2, "src", img2_src_value);
-			attr(img2, "class", "svelte-1a9ni8z");
-			attr(figure2, "class", "promo-right svelte-1a9ni8z");
-			attr(div2, "class", "section-container svelte-1a9ni8z");
-			attr(section, "class", "svelte-1a9ni8z");
+			attr(img2, "class", "svelte-174wsn0");
+			attr(figure2, "class", "promo-right svelte-174wsn0");
+			attr(div2, "class", "section-container svelte-174wsn0");
+			attr(section, "class", "svelte-174wsn0");
 		},
 		m(target, anchor) {
 			insert_hydration(target, section, anchor);
