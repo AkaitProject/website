@@ -2,7 +2,7 @@
   <html lang="en">
     <head>
       <meta name="generator" content="Wdt" />
-      <!-- HEAD_svelte-1vlpurq_START --><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="UTF-8"><link rel="preconnect" href="https://fonts.bunny.net"><link href="https://fonts.bunny.net/css?family=roboto:300,400,500,600,700" rel="stylesheet"><link rel="icon" type="image/png" sizes="32x32" href="https://wiuobdoxrhygumreqodx.supabase.co/storage/v1/object/public/images/41dbd844-f046-46f8-a634-fa0e517bdcad/1715882786638undefined.webp"><style>/* Reset & standardize default styles */
+      <!-- HEAD_svelte-1bd3h63_START --><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="UTF-8"><link rel="preconnect" href="https://fonts.bunny.net"><link href="https://fonts.bunny.net/css?family=roboto:300,400,500,600,700" rel="stylesheet"><link rel="icon" type="image/png" sizes="32x32" href="https://wiuobdoxrhygumreqodx.supabase.co/storage/v1/object/public/images/41dbd844-f046-46f8-a634-fa0e517bdcad/1715882786638undefined.webp"><style>/* Reset & standardize default styles */
 @import url("https://unpkg.com/@primo-app/primo@1.3.64/reset.css") layer;
 
 /* Design tokens (apply to components) */
@@ -116,10 +116,6 @@ html {
 }
 
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
   color: var(--color-brand, white);
   background: var(--color-inverted);
   border: 2px solid var(--color-brand);
@@ -140,13 +136,27 @@ html {
     border-color: #0d2436;
   }
 
-.button svg {
-    width: 1.5rem;
-    height: 1.5rem;
+.button.with_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
   }
 
+.button.with_icon svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
 @media (min-width: 800px) {
-    .button:has(> span) svg {
+
+.button.with_icon svg {
+        display: none
+    }
+      }
+
+@media (min-width: 800px) {
+    .button.with_icon svg {
       display: none;
     }
 }
@@ -164,7 +174,7 @@ html {
 .link:hover .arrow {
     transform: translateX(4px);
   }
-</style><!-- HEAD_svelte-1vlpurq_END -->
+</style><!-- HEAD_svelte-1bd3h63_END -->
       <style>@import url("https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css");header.svelte-1278ou.svelte-1278ou.svelte-1278ou{border-bottom:1px solid var(--border-color)}.section.svelte-1278ou.svelte-1278ou.svelte-1278ou{position:fixed;margin:0 auto;top:0;z-index:2;width:100%;border-radius:0}.section-container.svelte-1278ou.svelte-1278ou.svelte-1278ou{display:flex;justify-content:space-between;align-items:center;padding:4px 16px}.desktop-nav.svelte-1278ou.svelte-1278ou.svelte-1278ou{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;width:100%;height:41px}@media(min-width: 800px){.desktop-nav.svelte-1278ou.svelte-1278ou.svelte-1278ou{justify-content:start
 }}.desktop-nav.svelte-1278ou .logo.svelte-1278ou.svelte-1278ou{font-size:1.5rem;font-weight:600;line-height:1.4;margin-right:1.5rem;width:var(--size)}.desktop-nav.svelte-1278ou nav.svelte-1278ou.svelte-1278ou{display:flex;align-items:center;gap:2.5rem;flex:1}.desktop-nav.svelte-1278ou nav.svelte-1278ou a.svelte-1278ou{font-size:calc(1rem - 1px);font-weight:400;display:none;letter-spacing:0.0125rem}.desktop-nav.svelte-1278ou nav a.nav-item.svelte-1278ou.svelte-1278ou{color:#818c99;border-bottom:2px solid transparent;transition:border-color 0.1s;white-space:nowrap}@media(min-width: 800px){.desktop-nav.svelte-1278ou nav a.nav-item.svelte-1278ou.svelte-1278ou{margin-bottom:-2px
     }}.desktop-nav.svelte-1278ou nav a.nav-item.svelte-1278ou.svelte-1278ou:hover{color:var(--color-base);border-color:var(--color-brand)}.desktop-nav.svelte-1278ou nav .nav-divider.svelte-1278ou.svelte-1278ou{margin-right:auto}.desktop-nav.svelte-1278ou nav a.icon-button.svelte-1278ou.svelte-1278ou{font-size:1.15rem;padding:6px 18px}.desktop-nav.svelte-1278ou button#open.svelte-1278ou.svelte-1278ou{color:var(--color-brand);font-size:1.75rem;margin-left:auto}nav#mobile-nav.svelte-1278ou.svelte-1278ou.svelte-1278ou{font-size:1rem;position:absolute;flex-direction:column;text-align:left;background-color:var(--background-color, white);box-shadow:var(--box-shadow);border-radius:var(--border-radius);left:0.5rem;top:0.5rem;right:0.5rem;padding:2rem 0 1rem 0;height:41px}nav#mobile-nav.svelte-1278ou .logo.svelte-1278ou.svelte-1278ou{display:block;position:absolute;left:1rem;top:1rem;font-size:1.5rem}nav#mobile-nav.svelte-1278ou img.logo.svelte-1278ou.svelte-1278ou{max-height:25px}nav#mobile-nav.svelte-1278ou a.svelte-1278ou.svelte-1278ou{display:block;padding:1rem 2rem 1rem 2rem}nav#mobile-nav.svelte-1278ou a.svelte-1278ou.svelte-1278ou:first-of-type{margin-top:0.5rem}nav#mobile-nav.svelte-1278ou hr.svelte-1278ou.svelte-1278ou{margin:0.5rem 2rem;border-top-color:var(--color-shade);opacity:0.6}nav#mobile-nav.svelte-1278ou hr.svelte-1278ou.svelte-1278ou:first-child{margin:1.5rem 0 0 0;opacity:0.3}nav#mobile-nav.svelte-1278ou button#close.svelte-1278ou.svelte-1278ou{display:block;position:absolute;right:1rem;top:1rem;font-size:1.75rem;color:var(--color-brand)}@media(min-width: 800px){#open.svelte-1278ou.svelte-1278ou.svelte-1278ou,#mobile-nav.svelte-1278ou.svelte-1278ou.svelte-1278ou{display:none}.desktop-nav.svelte-1278ou nav.svelte-1278ou a.svelte-1278ou{display:inline-block}}.section:nth-of-type(2){margin-top:50px;border-top-left-radius:0;border-top-right-radius:0}
@@ -214,7 +224,7 @@ footer.svelte-1jf2zku.svelte-1jf2zku{border-top:1px solid var(--border-color, #e
     <figure class="elements-center svelte-1v8viqy"><img src="https://wiuobdoxrhygumreqodx.supabase.co/storage/v1/object/public/images/41dbd844-f046-46f8-a634-fa0e517bdcad/1715960751473elements_center.svg" class="svelte-1v8viqy"></figure>
     <div class="body svelte-1v8viqy"><h1 class="headline svelte-1v8viqy"><!-- HTML_TAG_START -->Мощная платформа<br>для защиты ваших прав<!-- HTML_TAG_END --></h1>
       <div class="subheading svelte-1v8viqy"><!-- HTML_TAG_START -->Рассказываем студентам об&nbsp;их&nbsp;правах<br>и помогаем эффективно&nbsp;их реализовать.<!-- HTML_TAG_END --></div>
-      <a href="//vk.me/club223900914" class="button svelte-1v8viqy"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--flowbite"><!-- HTML_TAG_START --><path fill="currentColor" fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12m9.008-3.018a1.502 1.502 0 0 1 2.522 1.159v.024a1.44 1.44 0 0 1-1.493 1.418a1 1 0 0 0-1.037.999V14a1 1 0 1 0 2 0v-.539a3.44 3.44 0 0 0 2.529-3.256a3.502 3.502 0 0 0-7-.255a1 1 0 0 0 2 .076c.014-.398.187-.774.48-1.044Zm.982 7.026a1 1 0 1 0 0 2H12a1 1 0 1 0 0-2z" clip-rule="evenodd"/><!-- HTML_TAG_END --></svg>
+      <a href="//vk.me/club223900914" class="button with_icon svelte-1v8viqy"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--flowbite"><!-- HTML_TAG_START --><path fill="currentColor" fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12m9.008-3.018a1.502 1.502 0 0 1 2.522 1.159v.024a1.44 1.44 0 0 1-1.493 1.418a1 1 0 0 0-1.037.999V14a1 1 0 1 0 2 0v-.539a3.44 3.44 0 0 0 2.529-3.256a3.502 3.502 0 0 0-7-.255a1 1 0 0 0 2 .076c.014-.398.187-.774.48-1.044Zm.982 7.026a1 1 0 1 0 0 2H12a1 1 0 1 0 0-2z" clip-rule="evenodd"/><!-- HTML_TAG_END --></svg>
           <span>Задать свой вопрос</span></a></div>
     <figure class="elements-right svelte-1v8viqy"><img src="https://wiuobdoxrhygumreqodx.supabase.co/storage/v1/object/public/images/41dbd844-f046-46f8-a634-fa0e517bdcad/1715960744086elements_right.svg" class="svelte-1v8viqy"></figure></div></section></div> 
 <div class="section" id="section-47276df9"><section class="section-container svelte-udcuzo"><header class="heading-group svelte-udcuzo"><div class="superhead">НАША ДЕЯТЕЛЬНОСТЬ</div>

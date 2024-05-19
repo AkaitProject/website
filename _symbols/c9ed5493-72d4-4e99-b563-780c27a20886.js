@@ -2843,7 +2843,7 @@ function create_if_block(ctx) {
 		},
 		h() {
 			attr(a, "href", a_href_value = /*link*/ ctx[0].url);
-			attr(a, "class", "button svelte-1v8viqy");
+			attr(a, "class", "button with_icon svelte-1v8viqy");
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
