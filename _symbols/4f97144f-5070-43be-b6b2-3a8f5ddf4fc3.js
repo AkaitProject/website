@@ -3621,7 +3621,7 @@ function create_if_block(ctx) {
 			attr(hr0, "class", "svelte-1278ou");
 			attr(hr1, "class", "svelte-1278ou");
 			attr(button, "id", "close");
-			attr(button, "aria-label", "Close Navigation");
+			attr(button, "aria-label", "Закрыть меню");
 			attr(button, "class", "svelte-1278ou");
 			attr(nav, "id", "mobile-nav");
 			attr(nav, "class", "svelte-1278ou");
@@ -3949,7 +3949,10 @@ function create_fragment(ctx) {
 		each_blocks[i] = null;
 	});
 
-	icon = new Component$1({ props: { icon: "ic:round-menu" } });
+	icon = new Component$1({
+			props: { icon: "heroicons-outline:menu" }
+		});
+
 	let if_block1 = /*mobileNavOpen*/ ctx[3] && create_if_block(ctx);
 
 	return {
@@ -4034,7 +4037,7 @@ function create_fragment(ctx) {
 			set_style(a, "--size", style___size);
 			attr(div0, "class", "nav-divider svelte-1278ou");
 			attr(button, "id", "open");
-			attr(button, "aria-label", "Открыть навигацию");
+			attr(button, "aria-label", "Открыть меню");
 			attr(button, "class", "svelte-1278ou");
 			attr(nav, "class", "svelte-1278ou");
 			attr(div1, "class", "desktop-nav svelte-1278ou");
