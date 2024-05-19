@@ -339,6 +339,14 @@ function set_data(text, data) {
         return;
     text.data = data;
 }
+function set_style(node, key, value, important) {
+    if (value == null) {
+        node.style.removeProperty(key);
+    }
+    else {
+        node.style.setProperty(key, value, important ? 'important' : '');
+    }
+}
 function custom_event(type, detail, { bubbles = false, cancelable = false } = {}) {
     const e = document.createEvent('CustomEvent');
     e.initCustomEvent(type, bubbles, cancelable, detail);
@@ -3107,7 +3115,7 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		l(nodes) {
-			section = claim_element(nodes, "SECTION", { class: true });
+			section = claim_element(nodes, "SECTION", { style: true, class: true });
 			var section_nodes = children(section);
 			header = claim_element(section_nodes, "HEADER", { class: true });
 			var header_nodes = children(header);
@@ -3143,6 +3151,7 @@ function create_fragment(ctx) {
 			attr(div0, "class", "subheading");
 			attr(header, "class", "heading-group svelte-3pbbnz");
 			attr(div1, "class", "teasers svelte-3pbbnz");
+			set_style(section, "display", "none");
 			attr(section, "class", "section-container");
 		},
 		m(target, anchor) {
