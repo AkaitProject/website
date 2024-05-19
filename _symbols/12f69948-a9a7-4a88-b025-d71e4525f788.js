@@ -2818,7 +2818,7 @@ function create_if_block_1(ctx) {
 	let t1;
 	let a_href_value;
 	let current;
-	icon = new Component$1({ props: { icon: /*link_icon*/ ctx[4] } });
+	icon = new Component$1({ props: { icon: /*link_icon*/ ctx[3] } });
 
 	return {
 		c() {
@@ -2855,7 +2855,7 @@ function create_if_block_1(ctx) {
 		},
 		p(ctx, dirty) {
 			const icon_changes = {};
-			if (dirty & /*link_icon*/ 16) icon_changes.icon = /*link_icon*/ ctx[4];
+			if (dirty & /*link_icon*/ 8) icon_changes.icon = /*link_icon*/ ctx[3];
 			icon.$set(icon_changes);
 			if ((!current || dirty & /*link*/ 1) && t1_value !== (t1_value = /*link*/ ctx[0].label + "")) set_data(t1, t1_value);
 
@@ -2887,13 +2887,13 @@ function create_if_block(ctx) {
 	return {
 		c() {
 			div = element("div");
-			t = text(/*subheading*/ ctx[3]);
+			t = text(/*subheading*/ ctx[4]);
 			this.h();
 		},
 		l(nodes) {
 			div = claim_element(nodes, "DIV", { class: true });
 			var div_nodes = children(div);
-			t = claim_text(div_nodes, /*subheading*/ ctx[3]);
+			t = claim_text(div_nodes, /*subheading*/ ctx[4]);
 			div_nodes.forEach(detach);
 			this.h();
 		},
@@ -2905,7 +2905,7 @@ function create_if_block(ctx) {
 			append_hydration(div, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*subheading*/ 8) set_data(t, /*subheading*/ ctx[3]);
+			if (dirty & /*subheading*/ 16) set_data(t, /*subheading*/ ctx[4]);
 		},
 		d(detaching) {
 			if (detaching) detach(div);
@@ -2928,7 +2928,7 @@ function create_fragment(ctx) {
 	let t3;
 	let current;
 	let if_block0 = /*link*/ ctx[0].label && create_if_block_1(ctx);
-	let if_block1 = /*subheading*/ ctx[3] && create_if_block(ctx);
+	let if_block1 = /*subheading*/ ctx[4] && create_if_block(ctx);
 
 	return {
 		c() {
@@ -3030,7 +3030,7 @@ function create_fragment(ctx) {
 				attr(img, "alt", img_alt_value);
 			}
 
-			if (/*subheading*/ ctx[3]) {
+			if (/*subheading*/ ctx[4]) {
 				if (if_block1) {
 					if_block1.p(ctx, dirty);
 				} else {
@@ -3065,19 +3065,19 @@ function instance($$self, $$props, $$invalidate) {
 	let { link } = $$props;
 	let { image } = $$props;
 	let { heading } = $$props;
-	let { subheading } = $$props;
 	let { link_icon } = $$props;
+	let { subheading } = $$props;
 
 	$$self.$$set = $$props => {
 		if ('props' in $$props) $$invalidate(5, props = $$props.props);
 		if ('link' in $$props) $$invalidate(0, link = $$props.link);
 		if ('image' in $$props) $$invalidate(1, image = $$props.image);
 		if ('heading' in $$props) $$invalidate(2, heading = $$props.heading);
-		if ('subheading' in $$props) $$invalidate(3, subheading = $$props.subheading);
-		if ('link_icon' in $$props) $$invalidate(4, link_icon = $$props.link_icon);
+		if ('link_icon' in $$props) $$invalidate(3, link_icon = $$props.link_icon);
+		if ('subheading' in $$props) $$invalidate(4, subheading = $$props.subheading);
 	};
 
-	return [link, image, heading, subheading, link_icon, props];
+	return [link, image, heading, link_icon, subheading, props];
 }
 
 class Component extends SvelteComponent {
@@ -3089,8 +3089,8 @@ class Component extends SvelteComponent {
 			link: 0,
 			image: 1,
 			heading: 2,
-			subheading: 3,
-			link_icon: 4
+			link_icon: 3,
+			subheading: 4
 		});
 	}
 }
