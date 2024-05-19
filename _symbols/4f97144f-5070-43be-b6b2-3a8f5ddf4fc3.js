@@ -3949,10 +3949,7 @@ function create_fragment(ctx) {
 		each_blocks[i] = null;
 	});
 
-	icon = new Component$1({
-			props: { icon: "heroicons-outline:menu" }
-		});
-
+	icon = new Component$1({ props: { icon: "heroicons-solid:menu" } });
 	let if_block1 = /*mobileNavOpen*/ ctx[3] && create_if_block(ctx);
 
 	return {
