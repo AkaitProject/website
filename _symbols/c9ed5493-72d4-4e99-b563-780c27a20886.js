@@ -2843,7 +2843,7 @@ function create_if_block(ctx) {
 		},
 		h() {
 			attr(a, "href", a_href_value = /*link*/ ctx[0].url);
-			attr(a, "class", "button with_icon svelte-j2vo8p");
+			attr(a, "class", "button with_icon svelte-16t6854");
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
@@ -2960,20 +2960,20 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		h() {
-			if (!src_url_equal(img0.src, img0_src_value = /*image_left*/ ctx[3].url)) attr(img0, "src", img0_src_value);
-			attr(img0, "class", "svelte-j2vo8p");
-			attr(figure0, "class", "elements-left svelte-j2vo8p");
-			if (!src_url_equal(img1.src, img1_src_value = /*image_center*/ ctx[6].url)) attr(img1, "src", img1_src_value);
-			attr(img1, "class", "svelte-j2vo8p");
-			attr(figure1, "class", "elements-center svelte-j2vo8p");
-			attr(h1, "class", "headline svelte-j2vo8p");
-			attr(div0, "class", "subheading svelte-j2vo8p");
-			attr(div1, "class", "body svelte-j2vo8p");
-			if (!src_url_equal(img2.src, img2_src_value = /*image_right*/ ctx[5].url)) attr(img2, "src", img2_src_value);
-			attr(img2, "class", "svelte-j2vo8p");
-			attr(figure2, "class", "elements-right svelte-j2vo8p");
-			attr(div2, "class", "section-container svelte-j2vo8p");
-			attr(section, "class", "svelte-j2vo8p");
+			if (!src_url_equal(img0.src, img0_src_value = /*promo_big*/ ctx[4].url)) attr(img0, "src", img0_src_value);
+			attr(img0, "class", "svelte-16t6854");
+			attr(figure0, "class", "promo-big svelte-16t6854");
+			if (!src_url_equal(img1.src, img1_src_value = /*promo_left*/ ctx[5].url)) attr(img1, "src", img1_src_value);
+			attr(img1, "class", "svelte-16t6854");
+			attr(figure1, "class", "promo-left svelte-16t6854");
+			attr(h1, "class", "headline svelte-16t6854");
+			attr(div0, "class", "subheading svelte-16t6854");
+			attr(div1, "class", "body svelte-16t6854");
+			if (!src_url_equal(img2.src, img2_src_value = /*promo_right*/ ctx[6].url)) attr(img2, "src", img2_src_value);
+			attr(img2, "class", "svelte-16t6854");
+			attr(figure2, "class", "promo-right svelte-16t6854");
+			attr(div2, "class", "section-container svelte-16t6854");
+			attr(section, "class", "svelte-16t6854");
 		},
 		m(target, anchor) {
 			insert_hydration(target, section, anchor);
@@ -2989,7 +2989,7 @@ function create_fragment(ctx) {
 			h1.innerHTML = /*heading*/ ctx[1];
 			append_hydration(div1, t2);
 			append_hydration(div1, div0);
-			div0.innerHTML = /*subheading*/ ctx[4];
+			div0.innerHTML = /*subheading*/ ctx[3];
 			append_hydration(div1, t3);
 			if (if_block) if_block.m(div1, null);
 			append_hydration(div2, t4);
@@ -2998,15 +2998,15 @@ function create_fragment(ctx) {
 			current = true;
 		},
 		p(ctx, [dirty]) {
-			if (!current || dirty & /*image_left*/ 8 && !src_url_equal(img0.src, img0_src_value = /*image_left*/ ctx[3].url)) {
+			if (!current || dirty & /*promo_big*/ 16 && !src_url_equal(img0.src, img0_src_value = /*promo_big*/ ctx[4].url)) {
 				attr(img0, "src", img0_src_value);
 			}
 
-			if (!current || dirty & /*image_center*/ 64 && !src_url_equal(img1.src, img1_src_value = /*image_center*/ ctx[6].url)) {
+			if (!current || dirty & /*promo_left*/ 32 && !src_url_equal(img1.src, img1_src_value = /*promo_left*/ ctx[5].url)) {
 				attr(img1, "src", img1_src_value);
 			}
 
-			if (!current || dirty & /*heading*/ 2) h1.innerHTML = /*heading*/ ctx[1];			if (!current || dirty & /*subheading*/ 16) div0.innerHTML = /*subheading*/ ctx[4];
+			if (!current || dirty & /*heading*/ 2) h1.innerHTML = /*heading*/ ctx[1];			if (!current || dirty & /*subheading*/ 8) div0.innerHTML = /*subheading*/ ctx[3];
 			if (/*link*/ ctx[0].label) {
 				if (if_block) {
 					if_block.p(ctx, dirty);
@@ -3030,7 +3030,7 @@ function create_fragment(ctx) {
 				check_outros();
 			}
 
-			if (!current || dirty & /*image_right*/ 32 && !src_url_equal(img2.src, img2_src_value = /*image_right*/ ctx[5].url)) {
+			if (!current || dirty & /*promo_right*/ 64 && !src_url_equal(img2.src, img2_src_value = /*promo_right*/ ctx[6].url)) {
 				attr(img2, "src", img2_src_value);
 			}
 		},
@@ -3055,30 +3055,30 @@ function instance($$self, $$props, $$invalidate) {
 	let { link } = $$props;
 	let { heading } = $$props;
 	let { link_icon } = $$props;
-	let { image_left } = $$props;
 	let { subheading } = $$props;
-	let { image_right } = $$props;
-	let { image_center } = $$props;
+	let { promo_big } = $$props;
+	let { promo_left } = $$props;
+	let { promo_right } = $$props;
 
 	$$self.$$set = $$props => {
 		if ('props' in $$props) $$invalidate(7, props = $$props.props);
 		if ('link' in $$props) $$invalidate(0, link = $$props.link);
 		if ('heading' in $$props) $$invalidate(1, heading = $$props.heading);
 		if ('link_icon' in $$props) $$invalidate(2, link_icon = $$props.link_icon);
-		if ('image_left' in $$props) $$invalidate(3, image_left = $$props.image_left);
-		if ('subheading' in $$props) $$invalidate(4, subheading = $$props.subheading);
-		if ('image_right' in $$props) $$invalidate(5, image_right = $$props.image_right);
-		if ('image_center' in $$props) $$invalidate(6, image_center = $$props.image_center);
+		if ('subheading' in $$props) $$invalidate(3, subheading = $$props.subheading);
+		if ('promo_big' in $$props) $$invalidate(4, promo_big = $$props.promo_big);
+		if ('promo_left' in $$props) $$invalidate(5, promo_left = $$props.promo_left);
+		if ('promo_right' in $$props) $$invalidate(6, promo_right = $$props.promo_right);
 	};
 
 	return [
 		link,
 		heading,
 		link_icon,
-		image_left,
 		subheading,
-		image_right,
-		image_center,
+		promo_big,
+		promo_left,
+		promo_right,
 		props
 	];
 }
@@ -3092,10 +3092,10 @@ class Component extends SvelteComponent {
 			link: 0,
 			heading: 1,
 			link_icon: 2,
-			image_left: 3,
-			subheading: 4,
-			image_right: 5,
-			image_center: 6
+			subheading: 3,
+			promo_big: 4,
+			promo_left: 5,
+			promo_right: 6
 		});
 	}
 }
