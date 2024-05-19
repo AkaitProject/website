@@ -2960,10 +2960,10 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		h() {
-			if (!src_url_equal(img0.src, img0_src_value = /*promo_big*/ ctx[4].url)) attr(img0, "src", img0_src_value);
+			if (!src_url_equal(img0.src, img0_src_value = /*promo_big*/ ctx[3].url)) attr(img0, "src", img0_src_value);
 			attr(img0, "class", "svelte-1u2d4rv");
 			attr(figure0, "class", "promo-big svelte-1u2d4rv");
-			if (!src_url_equal(img1.src, img1_src_value = /*promo_left*/ ctx[5].url)) attr(img1, "src", img1_src_value);
+			if (!src_url_equal(img1.src, img1_src_value = /*promo_left*/ ctx[4].url)) attr(img1, "src", img1_src_value);
 			attr(img1, "class", "svelte-1u2d4rv");
 			attr(figure1, "class", "promo-left svelte-1u2d4rv");
 			attr(h1, "class", "headline svelte-1u2d4rv");
@@ -2989,7 +2989,7 @@ function create_fragment(ctx) {
 			h1.innerHTML = /*heading*/ ctx[1];
 			append_hydration(div1, t2);
 			append_hydration(div1, div0);
-			div0.innerHTML = /*subheading*/ ctx[3];
+			div0.innerHTML = /*subheading*/ ctx[5];
 			append_hydration(div1, t3);
 			if (if_block) if_block.m(div1, null);
 			append_hydration(div2, t4);
@@ -2998,15 +2998,15 @@ function create_fragment(ctx) {
 			current = true;
 		},
 		p(ctx, [dirty]) {
-			if (!current || dirty & /*promo_big*/ 16 && !src_url_equal(img0.src, img0_src_value = /*promo_big*/ ctx[4].url)) {
+			if (!current || dirty & /*promo_big*/ 8 && !src_url_equal(img0.src, img0_src_value = /*promo_big*/ ctx[3].url)) {
 				attr(img0, "src", img0_src_value);
 			}
 
-			if (!current || dirty & /*promo_left*/ 32 && !src_url_equal(img1.src, img1_src_value = /*promo_left*/ ctx[5].url)) {
+			if (!current || dirty & /*promo_left*/ 16 && !src_url_equal(img1.src, img1_src_value = /*promo_left*/ ctx[4].url)) {
 				attr(img1, "src", img1_src_value);
 			}
 
-			if (!current || dirty & /*heading*/ 2) h1.innerHTML = /*heading*/ ctx[1];			if (!current || dirty & /*subheading*/ 8) div0.innerHTML = /*subheading*/ ctx[3];
+			if (!current || dirty & /*heading*/ 2) h1.innerHTML = /*heading*/ ctx[1];			if (!current || dirty & /*subheading*/ 32) div0.innerHTML = /*subheading*/ ctx[5];
 			if (/*link*/ ctx[0].label) {
 				if (if_block) {
 					if_block.p(ctx, dirty);
@@ -3055,9 +3055,9 @@ function instance($$self, $$props, $$invalidate) {
 	let { link } = $$props;
 	let { heading } = $$props;
 	let { link_icon } = $$props;
-	let { subheading } = $$props;
 	let { promo_big } = $$props;
 	let { promo_left } = $$props;
+	let { subheading } = $$props;
 	let { promo_right } = $$props;
 
 	$$self.$$set = $$props => {
@@ -3065,9 +3065,9 @@ function instance($$self, $$props, $$invalidate) {
 		if ('link' in $$props) $$invalidate(0, link = $$props.link);
 		if ('heading' in $$props) $$invalidate(1, heading = $$props.heading);
 		if ('link_icon' in $$props) $$invalidate(2, link_icon = $$props.link_icon);
-		if ('subheading' in $$props) $$invalidate(3, subheading = $$props.subheading);
-		if ('promo_big' in $$props) $$invalidate(4, promo_big = $$props.promo_big);
-		if ('promo_left' in $$props) $$invalidate(5, promo_left = $$props.promo_left);
+		if ('promo_big' in $$props) $$invalidate(3, promo_big = $$props.promo_big);
+		if ('promo_left' in $$props) $$invalidate(4, promo_left = $$props.promo_left);
+		if ('subheading' in $$props) $$invalidate(5, subheading = $$props.subheading);
 		if ('promo_right' in $$props) $$invalidate(6, promo_right = $$props.promo_right);
 	};
 
@@ -3075,9 +3075,9 @@ function instance($$self, $$props, $$invalidate) {
 		link,
 		heading,
 		link_icon,
-		subheading,
 		promo_big,
 		promo_left,
+		subheading,
 		promo_right,
 		props
 	];
@@ -3092,9 +3092,9 @@ class Component extends SvelteComponent {
 			link: 0,
 			heading: 1,
 			link_icon: 2,
-			subheading: 3,
-			promo_big: 4,
-			promo_left: 5,
+			promo_big: 3,
+			promo_left: 4,
+			subheading: 5,
 			promo_right: 6
 		});
 	}
