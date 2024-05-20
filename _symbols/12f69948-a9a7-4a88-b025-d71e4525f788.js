@@ -2925,12 +2925,11 @@ function create_fragment(ctx) {
 	let h1;
 	let t1;
 	let t2;
-	let t3;
 	let figure1;
 	let img1;
 	let img1_src_value;
 	let img1_alt_value;
-	let t4;
+	let t3;
 	let current;
 	let if_block0 = /*link*/ ctx[0].label && create_if_block_1(ctx);
 	let if_block1 = /*subheading*/ ctx[5] && create_if_block(ctx);
@@ -2944,13 +2943,12 @@ function create_fragment(ctx) {
 			t0 = space();
 			div0 = element("div");
 			h1 = element("h1");
-			t1 = text(/*heading*/ ctx[2]);
-			t2 = space();
+			t1 = space();
 			if (if_block0) if_block0.c();
-			t3 = space();
+			t2 = space();
 			figure1 = element("figure");
 			img1 = element("img");
-			t4 = space();
+			t3 = space();
 			if (if_block1) if_block1.c();
 			this.h();
 		},
@@ -2968,17 +2966,16 @@ function create_fragment(ctx) {
 			var div0_nodes = children(div0);
 			h1 = claim_element(div0_nodes, "H1", { class: true });
 			var h1_nodes = children(h1);
-			t1 = claim_text(h1_nodes, /*heading*/ ctx[2]);
 			h1_nodes.forEach(detach);
-			t2 = claim_space(div0_nodes);
+			t1 = claim_space(div0_nodes);
 			if (if_block0) if_block0.l(div0_nodes);
 			div0_nodes.forEach(detach);
-			t3 = claim_space(div1_nodes);
+			t2 = claim_space(div1_nodes);
 			figure1 = claim_element(div1_nodes, "FIGURE", { class: true });
 			var figure1_nodes = children(figure1);
 			img1 = claim_element(figure1_nodes, "IMG", { src: true, alt: true, class: true });
 			figure1_nodes.forEach(detach);
-			t4 = claim_space(div1_nodes);
+			t3 = claim_space(div1_nodes);
 			if (if_block1) if_block1.l(div1_nodes);
 			div1_nodes.forEach(detach);
 			section_nodes.forEach(detach);
@@ -3006,13 +3003,13 @@ function create_fragment(ctx) {
 			append_hydration(div1, t0);
 			append_hydration(div1, div0);
 			append_hydration(div0, h1);
-			append_hydration(h1, t1);
-			append_hydration(div0, t2);
+			h1.innerHTML = /*heading*/ ctx[2];
+			append_hydration(div0, t1);
 			if (if_block0) if_block0.m(div0, null);
-			append_hydration(div1, t3);
+			append_hydration(div1, t2);
 			append_hydration(div1, figure1);
 			append_hydration(figure1, img1);
-			append_hydration(div1, t4);
+			append_hydration(div1, t3);
 			if (if_block1) if_block1.m(div1, null);
 			current = true;
 		},
@@ -3025,8 +3022,7 @@ function create_fragment(ctx) {
 				attr(img0, "alt", img0_alt_value);
 			}
 
-			if (!current || dirty & /*heading*/ 4) set_data(t1, /*heading*/ ctx[2]);
-
+			if (!current || dirty & /*heading*/ 4) h1.innerHTML = /*heading*/ ctx[2];
 			if (/*link*/ ctx[0].label) {
 				if (if_block0) {
 					if_block0.p(ctx, dirty);
