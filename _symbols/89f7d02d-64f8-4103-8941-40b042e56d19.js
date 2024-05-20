@@ -2809,21 +2809,21 @@ let Component$1 = class Component extends SvelteComponent {
 
 function get_each_context(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[3] = list[i].link;
-	child_ctx[4] = list[i].icon;
+	child_ctx[5] = list[i].link;
+	child_ctx[6] = list[i].icon;
 	return child_ctx;
 }
 
 function get_each_context_1(ctx, list, i) {
 	const child_ctx = ctx.slice();
-	child_ctx[3] = list[i].link;
+	child_ctx[5] = list[i].link;
 	return child_ctx;
 }
 
-// (89:6) {#each footer_nav as { link }}
+// (93:6) {#each footer_nav as { link }}
 function create_each_block_1(ctx) {
 	let a;
-	let t_value = /*link*/ ctx[3].label + "";
+	let t_value = /*link*/ ctx[5].label + "";
 	let t;
 	let a_href_value;
 
@@ -2841,17 +2841,17 @@ function create_each_block_1(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "href", a_href_value = /*link*/ ctx[3].url);
-			attr(a, "class", "svelte-lu544b");
+			attr(a, "href", a_href_value = /*link*/ ctx[5].url);
+			attr(a, "class", "svelte-17vxzyj");
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
 			append_hydration(a, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*footer_nav*/ 2 && t_value !== (t_value = /*link*/ ctx[3].label + "")) set_data(t, t_value);
+			if (dirty & /*footer_nav*/ 2 && t_value !== (t_value = /*link*/ ctx[5].label + "")) set_data(t, t_value);
 
-			if (dirty & /*footer_nav*/ 2 && a_href_value !== (a_href_value = /*link*/ ctx[3].url)) {
+			if (dirty & /*footer_nav*/ 2 && a_href_value !== (a_href_value = /*link*/ ctx[5].url)) {
 				attr(a, "href", a_href_value);
 			}
 		},
@@ -2861,7 +2861,7 @@ function create_each_block_1(ctx) {
 	};
 }
 
-// (94:6) {#each social as { link, icon }}
+// (98:6) {#each social as { link, icon }}
 function create_each_block(ctx) {
 	let li;
 	let a;
@@ -2870,7 +2870,7 @@ function create_each_block(ctx) {
 	let a_aria_label_value;
 	let t;
 	let current;
-	icon = new Component$1({ props: { icon: /*icon*/ ctx[4] } });
+	icon = new Component$1({ props: { icon: /*icon*/ ctx[6] } });
 
 	return {
 		c() {
@@ -2898,9 +2898,9 @@ function create_each_block(ctx) {
 			this.h();
 		},
 		h() {
-			attr(a, "href", a_href_value = /*link*/ ctx[3].url);
-			attr(a, "aria-label", a_aria_label_value = /*icon*/ ctx[4]);
-			attr(a, "class", "svelte-lu544b");
+			attr(a, "href", a_href_value = /*link*/ ctx[5].url);
+			attr(a, "aria-label", a_aria_label_value = /*icon*/ ctx[6]);
+			attr(a, "class", "svelte-17vxzyj");
 		},
 		m(target, anchor) {
 			insert_hydration(target, li, anchor);
@@ -2911,14 +2911,14 @@ function create_each_block(ctx) {
 		},
 		p(ctx, dirty) {
 			const icon_changes = {};
-			if (dirty & /*social*/ 1) icon_changes.icon = /*icon*/ ctx[4];
+			if (dirty & /*social*/ 1) icon_changes.icon = /*icon*/ ctx[6];
 			icon.$set(icon_changes);
 
-			if (!current || dirty & /*social*/ 1 && a_href_value !== (a_href_value = /*link*/ ctx[3].url)) {
+			if (!current || dirty & /*social*/ 1 && a_href_value !== (a_href_value = /*link*/ ctx[5].url)) {
 				attr(a, "href", a_href_value);
 			}
 
-			if (!current || dirty & /*social*/ 1 && a_aria_label_value !== (a_aria_label_value = /*icon*/ ctx[4])) {
+			if (!current || dirty & /*social*/ 1 && a_aria_label_value !== (a_aria_label_value = /*icon*/ ctx[6])) {
 				attr(a, "aria-label", a_aria_label_value);
 			}
 		},
@@ -2944,8 +2944,11 @@ function create_fragment(ctx) {
 	let span;
 	let t0;
 	let t1;
-	let nav;
 	let t2;
+	let t3;
+	let t4;
+	let nav;
+	let t5;
 	let ul;
 	let current;
 	let each_value_1 = /*footer_nav*/ ctx[1];
@@ -2971,15 +2974,18 @@ function create_fragment(ctx) {
 			footer = element("footer");
 			div = element("div");
 			span = element("span");
-			t0 = text("© World Developers Team, 2024");
-			t1 = space();
+			t0 = text("© ");
+			t1 = text(/*company*/ ctx[2]);
+			t2 = text(", ");
+			t3 = text(/*production_year*/ ctx[3]);
+			t4 = space();
 			nav = element("nav");
 
 			for (let i = 0; i < each_blocks_1.length; i += 1) {
 				each_blocks_1[i].c();
 			}
 
-			t2 = space();
+			t5 = space();
 			ul = element("ul");
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -2995,9 +3001,12 @@ function create_fragment(ctx) {
 			var div_nodes = children(div);
 			span = claim_element(div_nodes, "SPAN", { class: true });
 			var span_nodes = children(span);
-			t0 = claim_text(span_nodes, "© World Developers Team, 2024");
+			t0 = claim_text(span_nodes, "© ");
+			t1 = claim_text(span_nodes, /*company*/ ctx[2]);
+			t2 = claim_text(span_nodes, ", ");
+			t3 = claim_text(span_nodes, /*production_year*/ ctx[3]);
 			span_nodes.forEach(detach);
-			t1 = claim_space(div_nodes);
+			t4 = claim_space(div_nodes);
 			nav = claim_element(div_nodes, "NAV", { class: true });
 			var nav_nodes = children(nav);
 
@@ -3006,7 +3015,7 @@ function create_fragment(ctx) {
 			}
 
 			nav_nodes.forEach(detach);
-			t2 = claim_space(div_nodes);
+			t5 = claim_space(div_nodes);
 			ul = claim_element(div_nodes, "UL", { class: true });
 			var ul_nodes = children(ul);
 
@@ -3020,18 +3029,21 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		h() {
-			attr(span, "class", "copyright svelte-lu544b");
-			attr(nav, "class", "svelte-lu544b");
-			attr(ul, "class", "svelte-lu544b");
-			attr(div, "class", "section-container svelte-lu544b");
-			attr(footer, "class", "svelte-lu544b");
+			attr(span, "class", "copyright svelte-17vxzyj");
+			attr(nav, "class", "svelte-17vxzyj");
+			attr(ul, "class", "svelte-17vxzyj");
+			attr(div, "class", "section-container svelte-17vxzyj");
+			attr(footer, "class", "svelte-17vxzyj");
 		},
 		m(target, anchor) {
 			insert_hydration(target, footer, anchor);
 			append_hydration(footer, div);
 			append_hydration(div, span);
 			append_hydration(span, t0);
-			append_hydration(div, t1);
+			append_hydration(span, t1);
+			append_hydration(span, t2);
+			append_hydration(span, t3);
+			append_hydration(div, t4);
 			append_hydration(div, nav);
 
 			for (let i = 0; i < each_blocks_1.length; i += 1) {
@@ -3040,7 +3052,7 @@ function create_fragment(ctx) {
 				}
 			}
 
-			append_hydration(div, t2);
+			append_hydration(div, t5);
 			append_hydration(div, ul);
 
 			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -3052,6 +3064,9 @@ function create_fragment(ctx) {
 			current = true;
 		},
 		p(ctx, [dirty]) {
+			if (!current || dirty & /*company*/ 4) set_data(t1, /*company*/ ctx[2]);
+			if (!current || dirty & /*production_year*/ 8) set_data(t3, /*production_year*/ ctx[3]);
+
 			if (dirty & /*footer_nav*/ 2) {
 				each_value_1 = /*footer_nav*/ ctx[1];
 				let i;
@@ -3132,20 +3147,31 @@ function instance($$self, $$props, $$invalidate) {
 	let { props } = $$props;
 	let { social } = $$props;
 	let { footer_nav } = $$props;
+	let { company } = $$props;
+	let { production_year } = $$props;
 
 	$$self.$$set = $$props => {
-		if ('props' in $$props) $$invalidate(2, props = $$props.props);
+		if ('props' in $$props) $$invalidate(4, props = $$props.props);
 		if ('social' in $$props) $$invalidate(0, social = $$props.social);
 		if ('footer_nav' in $$props) $$invalidate(1, footer_nav = $$props.footer_nav);
+		if ('company' in $$props) $$invalidate(2, company = $$props.company);
+		if ('production_year' in $$props) $$invalidate(3, production_year = $$props.production_year);
 	};
 
-	return [social, footer_nav, props];
+	return [social, footer_nav, company, production_year, props];
 }
 
 class Component extends SvelteComponent {
 	constructor(options) {
 		super();
-		init(this, options, instance, create_fragment, safe_not_equal, { props: 2, social: 0, footer_nav: 1 });
+
+		init(this, options, instance, create_fragment, safe_not_equal, {
+			props: 4,
+			social: 0,
+			footer_nav: 1,
+			company: 2,
+			production_year: 3
+		});
 	}
 }
 
