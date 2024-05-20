@@ -2818,7 +2818,7 @@ function create_if_block_1(ctx) {
 	let t1;
 	let a_href_value;
 	let current;
-	icon = new Component$1({ props: { icon: /*link_icon*/ ctx[3] } });
+	icon = new Component$1({ props: { icon: /*link_icon*/ ctx[4] } });
 
 	return {
 		c() {
@@ -2843,7 +2843,7 @@ function create_if_block_1(ctx) {
 		},
 		h() {
 			attr(a, "href", a_href_value = /*link*/ ctx[0].url);
-			attr(a, "class", "button with_icon svelte-ouo18r");
+			attr(a, "class", "button with_icon svelte-1skdfwj");
 		},
 		m(target, anchor) {
 			insert_hydration(target, a, anchor);
@@ -2855,7 +2855,7 @@ function create_if_block_1(ctx) {
 		},
 		p(ctx, dirty) {
 			const icon_changes = {};
-			if (dirty & /*link_icon*/ 8) icon_changes.icon = /*link_icon*/ ctx[3];
+			if (dirty & /*link_icon*/ 16) icon_changes.icon = /*link_icon*/ ctx[4];
 			icon.$set(icon_changes);
 			if ((!current || dirty & /*link*/ 1) && t1_value !== (t1_value = /*link*/ ctx[0].label + "")) set_data(t1, t1_value);
 
@@ -2879,7 +2879,7 @@ function create_if_block_1(ctx) {
 	};
 }
 
-// (157:4) {#if subheading}
+// (156:4) {#if subheading}
 function create_if_block(ctx) {
 	let div;
 	let t;
@@ -2887,25 +2887,25 @@ function create_if_block(ctx) {
 	return {
 		c() {
 			div = element("div");
-			t = text(/*subheading*/ ctx[4]);
+			t = text(/*subheading*/ ctx[5]);
 			this.h();
 		},
 		l(nodes) {
 			div = claim_element(nodes, "DIV", { class: true });
 			var div_nodes = children(div);
-			t = claim_text(div_nodes, /*subheading*/ ctx[4]);
+			t = claim_text(div_nodes, /*subheading*/ ctx[5]);
 			div_nodes.forEach(detach);
 			this.h();
 		},
 		h() {
-			attr(div, "class", "subheading svelte-ouo18r");
+			attr(div, "class", "subheading svelte-1skdfwj");
 		},
 		m(target, anchor) {
 			insert_hydration(target, div, anchor);
 			append_hydration(div, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*subheading*/ 16) set_data(t, /*subheading*/ ctx[4]);
+			if (dirty & /*subheading*/ 32) set_data(t, /*subheading*/ ctx[5]);
 		},
 		d(detaching) {
 			if (detaching) detach(div);
@@ -2933,7 +2933,7 @@ function create_fragment(ctx) {
 	let t4;
 	let current;
 	let if_block0 = /*link*/ ctx[0].label && create_if_block_1(ctx);
-	let if_block1 = /*subheading*/ ctx[4] && create_if_block(ctx);
+	let if_block1 = /*subheading*/ ctx[5] && create_if_block(ctx);
 
 	return {
 		c() {
@@ -2985,18 +2985,18 @@ function create_fragment(ctx) {
 			this.h();
 		},
 		h() {
-			if (!src_url_equal(img0.src, img0_src_value = /*image_big*/ ctx[5].url)) attr(img0, "src", img0_src_value);
-			attr(img0, "alt", img0_alt_value = /*image_big*/ ctx[5].alt);
-			attr(img0, "class", "svelte-ouo18r");
-			attr(figure0, "class", "feedback-big svelte-ouo18r");
-			attr(h1, "class", "headline svelte-ouo18r");
-			attr(div0, "class", "body svelte-ouo18r");
+			if (!src_url_equal(img0.src, img0_src_value = /*image_big*/ ctx[3].url)) attr(img0, "src", img0_src_value);
+			attr(img0, "alt", img0_alt_value = /*image_big*/ ctx[3].alt);
+			attr(img0, "class", "svelte-1skdfwj");
+			attr(figure0, "class", "feedback-big svelte-1skdfwj");
+			attr(h1, "class", "headline svelte-1skdfwj");
+			attr(div0, "class", "body svelte-1skdfwj");
 			if (!src_url_equal(img1.src, img1_src_value = /*image*/ ctx[1].url)) attr(img1, "src", img1_src_value);
 			attr(img1, "alt", img1_alt_value = /*image*/ ctx[1].alt);
-			attr(img1, "class", "svelte-ouo18r");
-			attr(figure1, "class", "feedback svelte-ouo18r");
-			attr(div1, "class", "section-container svelte-ouo18r");
-			attr(section, "class", "svelte-ouo18r");
+			attr(img1, "class", "svelte-1skdfwj");
+			attr(figure1, "class", "feedback svelte-1skdfwj");
+			attr(div1, "class", "section-container svelte-1skdfwj");
+			attr(section, "class", "svelte-1skdfwj");
 		},
 		m(target, anchor) {
 			insert_hydration(target, section, anchor);
@@ -3017,11 +3017,11 @@ function create_fragment(ctx) {
 			current = true;
 		},
 		p(ctx, [dirty]) {
-			if (!current || dirty & /*image_big*/ 32 && !src_url_equal(img0.src, img0_src_value = /*image_big*/ ctx[5].url)) {
+			if (!current || dirty & /*image_big*/ 8 && !src_url_equal(img0.src, img0_src_value = /*image_big*/ ctx[3].url)) {
 				attr(img0, "src", img0_src_value);
 			}
 
-			if (!current || dirty & /*image_big*/ 32 && img0_alt_value !== (img0_alt_value = /*image_big*/ ctx[5].alt)) {
+			if (!current || dirty & /*image_big*/ 8 && img0_alt_value !== (img0_alt_value = /*image_big*/ ctx[3].alt)) {
 				attr(img0, "alt", img0_alt_value);
 			}
 
@@ -3058,7 +3058,7 @@ function create_fragment(ctx) {
 				attr(img1, "alt", img1_alt_value);
 			}
 
-			if (/*subheading*/ ctx[4]) {
+			if (/*subheading*/ ctx[5]) {
 				if (if_block1) {
 					if_block1.p(ctx, dirty);
 				} else {
@@ -3093,21 +3093,21 @@ function instance($$self, $$props, $$invalidate) {
 	let { link } = $$props;
 	let { image } = $$props;
 	let { heading } = $$props;
+	let { image_big } = $$props;
 	let { link_icon } = $$props;
 	let { subheading } = $$props;
-	let { image_big } = $$props;
 
 	$$self.$$set = $$props => {
 		if ('props' in $$props) $$invalidate(6, props = $$props.props);
 		if ('link' in $$props) $$invalidate(0, link = $$props.link);
 		if ('image' in $$props) $$invalidate(1, image = $$props.image);
 		if ('heading' in $$props) $$invalidate(2, heading = $$props.heading);
-		if ('link_icon' in $$props) $$invalidate(3, link_icon = $$props.link_icon);
-		if ('subheading' in $$props) $$invalidate(4, subheading = $$props.subheading);
-		if ('image_big' in $$props) $$invalidate(5, image_big = $$props.image_big);
+		if ('image_big' in $$props) $$invalidate(3, image_big = $$props.image_big);
+		if ('link_icon' in $$props) $$invalidate(4, link_icon = $$props.link_icon);
+		if ('subheading' in $$props) $$invalidate(5, subheading = $$props.subheading);
 	};
 
-	return [link, image, heading, link_icon, subheading, image_big, props];
+	return [link, image, heading, image_big, link_icon, subheading, props];
 }
 
 class Component extends SvelteComponent {
@@ -3119,9 +3119,9 @@ class Component extends SvelteComponent {
 			link: 0,
 			image: 1,
 			heading: 2,
-			link_icon: 3,
-			subheading: 4,
-			image_big: 5
+			image_big: 3,
+			link_icon: 4,
+			subheading: 5
 		});
 	}
 }
