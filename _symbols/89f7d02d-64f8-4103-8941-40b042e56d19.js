@@ -2849,9 +2849,9 @@ function create_each_block_1(ctx) {
 			append_hydration(a, t);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*footer_nav*/ 2 && t_value !== (t_value = /*link*/ ctx[5].label + "")) set_data(t, t_value);
+			if (dirty & /*footer_nav*/ 4 && t_value !== (t_value = /*link*/ ctx[5].label + "")) set_data(t, t_value);
 
-			if (dirty & /*footer_nav*/ 2 && a_href_value !== (a_href_value = /*link*/ ctx[5].url)) {
+			if (dirty & /*footer_nav*/ 4 && a_href_value !== (a_href_value = /*link*/ ctx[5].url)) {
 				attr(a, "href", a_href_value);
 			}
 		},
@@ -2951,7 +2951,7 @@ function create_fragment(ctx) {
 	let t5;
 	let ul;
 	let current;
-	let each_value_1 = /*footer_nav*/ ctx[1];
+	let each_value_1 = /*footer_nav*/ ctx[2];
 	let each_blocks_1 = [];
 
 	for (let i = 0; i < each_value_1.length; i += 1) {
@@ -2975,7 +2975,7 @@ function create_fragment(ctx) {
 			div = element("div");
 			span = element("span");
 			t0 = text("© ");
-			t1 = text(/*company*/ ctx[2]);
+			t1 = text(/*company*/ ctx[1]);
 			t2 = text(", ");
 			t3 = text(/*production_year*/ ctx[3]);
 			t4 = space();
@@ -3002,7 +3002,7 @@ function create_fragment(ctx) {
 			span = claim_element(div_nodes, "SPAN", { class: true });
 			var span_nodes = children(span);
 			t0 = claim_text(span_nodes, "© ");
-			t1 = claim_text(span_nodes, /*company*/ ctx[2]);
+			t1 = claim_text(span_nodes, /*company*/ ctx[1]);
 			t2 = claim_text(span_nodes, ", ");
 			t3 = claim_text(span_nodes, /*production_year*/ ctx[3]);
 			span_nodes.forEach(detach);
@@ -3064,11 +3064,11 @@ function create_fragment(ctx) {
 			current = true;
 		},
 		p(ctx, [dirty]) {
-			if (!current || dirty & /*company*/ 4) set_data(t1, /*company*/ ctx[2]);
+			if (!current || dirty & /*company*/ 2) set_data(t1, /*company*/ ctx[1]);
 			if (!current || dirty & /*production_year*/ 8) set_data(t3, /*production_year*/ ctx[3]);
 
-			if (dirty & /*footer_nav*/ 2) {
-				each_value_1 = /*footer_nav*/ ctx[1];
+			if (dirty & /*footer_nav*/ 4) {
+				each_value_1 = /*footer_nav*/ ctx[2];
 				let i;
 
 				for (i = 0; i < each_value_1.length; i += 1) {
@@ -3146,19 +3146,19 @@ function create_fragment(ctx) {
 function instance($$self, $$props, $$invalidate) {
 	let { props } = $$props;
 	let { social } = $$props;
-	let { footer_nav } = $$props;
 	let { company } = $$props;
+	let { footer_nav } = $$props;
 	let { production_year } = $$props;
 
 	$$self.$$set = $$props => {
 		if ('props' in $$props) $$invalidate(4, props = $$props.props);
 		if ('social' in $$props) $$invalidate(0, social = $$props.social);
-		if ('footer_nav' in $$props) $$invalidate(1, footer_nav = $$props.footer_nav);
-		if ('company' in $$props) $$invalidate(2, company = $$props.company);
+		if ('company' in $$props) $$invalidate(1, company = $$props.company);
+		if ('footer_nav' in $$props) $$invalidate(2, footer_nav = $$props.footer_nav);
 		if ('production_year' in $$props) $$invalidate(3, production_year = $$props.production_year);
 	};
 
-	return [social, footer_nav, company, production_year, props];
+	return [social, company, footer_nav, production_year, props];
 }
 
 class Component extends SvelteComponent {
@@ -3168,8 +3168,8 @@ class Component extends SvelteComponent {
 		init(this, options, instance, create_fragment, safe_not_equal, {
 			props: 4,
 			social: 0,
-			footer_nav: 1,
-			company: 2,
+			company: 1,
+			footer_nav: 2,
 			production_year: 3
 		});
 	}
