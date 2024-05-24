@@ -1,7 +1,7 @@
   <!DOCTYPE html>
   <html lang="ru">
     <head>
-      <!-- HEAD_svelte-nn0k5e_START --><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="UTF-8"><link rel="preconnect" href="https://fonts.bunny.net"><link href="https://fonts.bunny.net/css?family=roboto:300,400,500,600,700" rel="stylesheet"><link rel="icon" type="image/png" sizes="32x32" href="https://wiuobdoxrhygumreqodx.supabase.co/storage/v1/object/public/images/41dbd844-f046-46f8-a634-fa0e517bdcad/1715920383605favicon.png"><style>/* Reset & standardize default styles */
+      <!-- HEAD_svelte-xb0boo_START --><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="UTF-8"><link rel="preconnect" href="https://fonts.bunny.net"><link href="https://fonts.bunny.net/css?family=roboto:300,400,500,600,700" rel="stylesheet"><link rel="icon" type="image/png" sizes="32x32" href="https://wiuobdoxrhygumreqodx.supabase.co/storage/v1/object/public/images/41dbd844-f046-46f8-a634-fa0e517bdcad/1715920383605favicon.png"><style>/* Reset & standardize default styles */
 progress,sub,sup{vertical-align:baseline}blockquote,body,dd,dl,fieldset,figure,h1,h2,h3,h4,h5,h6,hr,ol,p,pre,ul{margin:0}fieldset,legend,ol,ul{padding:0}a,hr{color:inherit}*,::after,::before{box-sizing:border-box;box-sizing:border-box;border:0 solid currentColor;--tw-border-opacity:1;border-color:rgba(229,231,235,var(--tw-border-opacity))}body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji'}abbr[title]{-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,pre,samp{font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}::-moz-focus-inner{border-style:none;padding:0}:-moz-focusring{outline:ButtonText dotted 1px;outline:auto}:-moz-ui-invalid{box-shadow:none}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}button{background-color:transparent;background-image:none}ol,ul{list-style:none}html{-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";line-height:1.5}body{font-family:inherit;line-height:inherit}hr{height:0;border-top-width:1px}img{border-style:solid}textarea{resize:vertical}input::-moz-placeholder, textarea::-moz-placeholder{opacity:1;color:#9ca3af}input:-ms-input-placeholder, textarea:-ms-input-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{text-decoration:inherit}button,input,optgroup,select,textarea{padding:0;line-height:inherit;color:inherit}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}
 
 /* Design tokens (apply to components) */
@@ -26,16 +26,15 @@ progress,sub,sup{vertical-align:baseline}blockquote,body,dd,dl,fieldset,figure,h
   /* Base values */
   --color: var(--color-base);
   --box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
-  --border-radius: 10px;
+  --border-radius: 20px;
   --border-color: #eee;
-  --section-border-radius: 20px;
-  --section-background: #fff;
   --background: #ebedf0;
+  --background-accent: #fff;
 }
 @media (min-width: 800px)
   {
 :root {
-    --color-base: var(--color-heading);
+    --color-base: #000;
     --background: #fff
 }
   }
@@ -46,50 +45,54 @@ progress,sub,sup{vertical-align:baseline}blockquote,body,dd,dl,fieldset,figure,h
   color: var(--color-base);
   line-height: 1.5;
   font-size: 1rem;
+  background: var(--background-accent);
+}
+
+/* Sections container element */
+#canvas {
   background: var(--background);
 }
 
+/* Section element */
 .section {
-  background: var(--section-background);
-  border-radius: var(--section-border-radius);
+  background: var(--background-accent);
+  border-radius: var(--border-radius);
   margin: 0 auto 0.5rem auto;
 }
-
 @media (min-width: 800px) {
-
 .section {
     border-radius: 0;
     margin-bottom: 3rem
 }
   }
-
 .section.has-content {
     display: flex;
     justify-content: center;
   }
-
 .section.has-content .content {
       max-width: 800px;
       width: 100%;
     }
 
+/* Last section element */
 .section:last-of-type {
   margin-bottom: 0;
 }
 
+/* Section container element */
 .section-container {
   margin: 0 auto;
   padding: 1rem;
   max-width: 1280px;
 }
 
+/* Heading group element */
 .heading-group {
   display: grid;
   gap: 1rem;
   place-content: center;
   text-align: center;
 }
-
 .heading-group .superhead {
     font-family: var(--font-body);
     color: var(--color-accent);
@@ -98,7 +101,6 @@ progress,sub,sup{vertical-align:baseline}blockquote,body,dd,dl,fieldset,figure,h
     letter-spacing: 1.5px;
     text-transform: uppercase;
   }
-
 .heading-group .subheading {
     color: #4f6373;
     line-height: 1.4;
@@ -108,6 +110,7 @@ progress,sub,sup{vertical-align:baseline}blockquote,body,dd,dl,fieldset,figure,h
     margin: 0 auto;
   }
 
+/* Heading text element */
 .heading {
   font-family: var(--font-heading);
   color: var(--color-heading);
@@ -117,6 +120,7 @@ progress,sub,sup{vertical-align:baseline}blockquote,body,dd,dl,fieldset,figure,h
   max-width: 600px;
 }
 
+/* Button element */
 .button {
   color: var(--color-brand, white);
   background: var(--color-inverted);
@@ -125,37 +129,33 @@ progress,sub,sup{vertical-align:baseline}blockquote,body,dd,dl,fieldset,figure,h
   padding: 8px 20px;
   transition: 0.1s background, 0.1s color;
 }
-
 .button:hover {
     color: var(--color-inverted);
     background: var(--color-brand);
     border-color: var(--color-inverted);
   }
-
 .button.inverted {
     background: var(--color-white);
     color: var(--color-brand);
     border-color: #0d2436;
   }
-
 .button.with_icon {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
   }
-
 .button.with_icon svg {
       width: 1.25rem;
       height: 1.25rem;
     }
-
 @media (min-width: 800px) {
-
 .button.with_icon svg {
         display: none
     }
       }
+
+/* Link element */
 .link {
   font-size: 1.125rem;
   font-weight: 400;
@@ -167,7 +167,7 @@ progress,sub,sup{vertical-align:baseline}blockquote,body,dd,dl,fieldset,figure,h
 .link:hover .arrow {
     transform: translateX(4px);
   }
-</style><!-- HEAD_svelte-nn0k5e_END -->
+</style><!-- HEAD_svelte-xb0boo_END -->
       <style>.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri,.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri::after,.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri::before{box-sizing:border-box}hr.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri{height:0;color:inherit}button.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri{text-transform:none}button.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri{-webkit-appearance:button}.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri::-moz-focus-inner{border-style:none;padding:0}.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri:-moz-focusring{outline:ButtonText dotted 1px}.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri:-moz-ui-invalid{box-shadow:none}.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri::-webkit-inner-spin-button,.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri::-webkit-outer-spin-button{height:auto}.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri::-webkit-search-decoration{-webkit-appearance:none}.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}header.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri{border-bottom:1px solid var(--border-color)}.section.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri{position:fixed;margin:0 auto;top:0;z-index:2;width:100%;border-radius:0}.section-container.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri{display:flex;justify-content:space-between;align-items:center;padding:4px 16px}.desktop-nav.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;width:100%;height:41px}@media(min-width: 800px){.desktop-nav.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri{justify-content:start
 }}.desktop-nav.svelte-gna6ri .logo.svelte-gna6ri.svelte-gna6ri{font-size:1.5rem;font-weight:600;line-height:1.4;margin-right:1.5rem;width:var(--size)}.desktop-nav.svelte-gna6ri nav.svelte-gna6ri.svelte-gna6ri{display:flex;align-items:center;gap:2.5rem;flex:1}.desktop-nav.svelte-gna6ri nav.svelte-gna6ri a.svelte-gna6ri{font-size:calc(1rem - 1px);font-weight:400;display:none;letter-spacing:0.0125rem}.desktop-nav.svelte-gna6ri nav a.nav-item.svelte-gna6ri.svelte-gna6ri{color:var(--color-menu);border-bottom:2px solid transparent;transition:border-color 0.1s;white-space:nowrap}@media(min-width: 800px){.desktop-nav.svelte-gna6ri nav a.nav-item.svelte-gna6ri.svelte-gna6ri{margin-bottom:-2px
     }}.desktop-nav.svelte-gna6ri nav a.nav-item.svelte-gna6ri.svelte-gna6ri:hover{color:var(--color-heading);border-color:var(--color-brand)}.desktop-nav.svelte-gna6ri nav .nav-divider.svelte-gna6ri.svelte-gna6ri{margin-right:auto}.desktop-nav.svelte-gna6ri nav a.icon-button.svelte-gna6ri.svelte-gna6ri{font-size:1.15rem;padding:6px 18px}.desktop-nav.svelte-gna6ri button#open.svelte-gna6ri.svelte-gna6ri{color:var(--color-brand);font-size:1.75rem;margin-left:auto}nav#mobile-nav.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri{font-size:1rem;position:absolute;flex-direction:column;text-align:left;background-color:var(--background-color, white);box-shadow:var(--box-shadow);border-radius:var(--border-radius);left:0.5rem;top:0.5rem;right:0.5rem;padding:2rem 0 1rem 0;height:41px}nav#mobile-nav.svelte-gna6ri .logo.svelte-gna6ri.svelte-gna6ri{display:block;position:absolute;left:1rem;top:1rem;font-size:1.5rem}nav#mobile-nav.svelte-gna6ri img.logo.svelte-gna6ri.svelte-gna6ri{max-height:25px}nav#mobile-nav.svelte-gna6ri a.svelte-gna6ri.svelte-gna6ri{display:block;padding:1rem 2rem 1rem 2rem}nav#mobile-nav.svelte-gna6ri a.svelte-gna6ri.svelte-gna6ri:first-of-type{margin-top:0.5rem}nav#mobile-nav.svelte-gna6ri hr.svelte-gna6ri.svelte-gna6ri{margin:0.5rem 2rem;border-top-color:var(--color-shade);opacity:0.6}nav#mobile-nav.svelte-gna6ri hr.svelte-gna6ri.svelte-gna6ri:first-child{margin:1.5rem 0 0 0;opacity:0.3}nav#mobile-nav.svelte-gna6ri button#close.svelte-gna6ri.svelte-gna6ri{display:block;position:absolute;right:1rem;top:1rem;font-size:1.75rem;color:var(--color-brand)}@media(min-width: 800px){#open.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri,#mobile-nav.svelte-gna6ri.svelte-gna6ri.svelte-gna6ri{display:none}.desktop-nav.svelte-gna6ri nav.svelte-gna6ri a.svelte-gna6ri{display:inline-block}}.section:nth-of-type(2){margin-top:50px;border-top-left-radius:0;border-top-right-radius:0}
@@ -180,14 +180,12 @@ header.svelte-oai1pc.svelte-oai1pc{color:var(--color-inverted);position:relative
     	<div id="canvas">
       	 
 <div class="section svelte-gna6ri" id="section-7c563cf2"><header class="svelte-gna6ri"><div class="section-container svelte-gna6ri"><div class="desktop-nav svelte-gna6ri"><a href="/" class="logo svelte-gna6ri" style="--size: 11.8rem;"><img src="https://wiuobdoxrhygumreqodx.supabase.co/storage/v1/object/public/images/41dbd844-f046-46f8-a634-fa0e517bdcad/1716159611813logo_big.svg" alt="" class="svelte-gna6ri"></a>
-      <nav class="svelte-gna6ri"><a class="nav-item svelte-gna6ri" href="#section-47276df9">О проекте</a><a class="nav-item svelte-gna6ri" href="//vk.com/club223900914">Сообщество</a><a class="nav-item svelte-gna6ri" href="/why">Предложения</a>
+      <nav class="svelte-gna6ri">
         <div class="nav-divider svelte-gna6ri"></div>
-        <a class="button icon-button svelte-gna6ri" href="/#" onclick="window.open('//vk.com/widget_community.php?act=a_subscribe_box&amp;oid=-223900914&amp;state=1','_blank','width=1,height=1');return false;"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 16 16" class="iconify iconify--octicon"><!-- HTML_TAG_START --><path fill="currentColor" d="M2 5.5a3.5 3.5 0 1 1 5.898 2.549a5.51 5.51 0 0 1 3.034 4.084a.75.75 0 1 1-1.482.235a4 4 0 0 0-7.9 0a.75.75 0 0 1-1.482-.236A5.5 5.5 0 0 1 3.102 8.05A3.5 3.5 0 0 1 2 5.5M11 4a3.001 3.001 0 0 1 2.22 5.018a5 5 0 0 1 2.56 3.012a.749.749 0 0 1-.885.954a.75.75 0 0 1-.549-.514a3.51 3.51 0 0 0-2.522-2.372a.75.75 0 0 1-.574-.73v-.352a.75.75 0 0 1 .416-.672A1.5 1.5 0 0 0 11 5.5A.75.75 0 0 1 11 4m-5.5-.5a2 2 0 1 0-.001 3.999A2 2 0 0 0 5.5 3.5"/><!-- HTML_TAG_END --></svg>
-          </a><a class="button icon-button svelte-gna6ri" href="//vk.com/widget_community.php?act=a_subscribe_box&amp;oid=-223900914&amp;state=1"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--material-symbols"><!-- HTML_TAG_START --><path fill="currentColor" d="M14.6 8.075q0-1.075-.712-1.725T12 5.7q-.725 0-1.312.313t-1.013.912q-.4.575-1.088.663T7.4 7.225q-.35-.325-.387-.8t.237-.9q.8-1.2 2.038-1.862T12 3q2.425 0 3.938 1.375t1.512 3.6q0 1.125-.475 2.025t-1.75 2.125q-.925.875-1.25 1.363T13.55 14.6q-.1.6-.513 1t-.987.4t-.987-.387t-.413-.963q0-.975.425-1.787T12.5 11.15q1.275-1.125 1.688-1.737t.412-1.338M12 22q-.825 0-1.412-.587T10 20t.588-1.412T12 18t1.413.588T14 20t-.587 1.413T12 22"/><!-- HTML_TAG_END --></svg>
-          </a>
+        
         <button id="open" aria-label="Открыть меню" class="svelte-gna6ri"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 20 20" class="iconify iconify--heroicons-solid"><!-- HTML_TAG_START --><path fill="currentColor" fill-rule="evenodd" d="M3 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1m0 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1m0 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1" clip-rule="evenodd"/><!-- HTML_TAG_END --></svg></button></nav></div>
     </div></header></div> 
-<div class="section" id="section-b16feccb"><header class=" svelte-oai1pc"><img src="/_assets/gepinmuxjazsucdwpqfgc" alt="" class="svelte-oai1pc">
+<div class="section" id="section-b16feccb"><header class=" svelte-oai1pc"><img src="/_assets/wuhmpfwhkpotjtaotcdvc" alt="" class="svelte-oai1pc">
   <div class="heading-group svelte-oai1pc"><h1 class="heading svelte-oai1pc">Why Cali</h1>
     <span class="subheading svelte-oai1pc">We're pioneering in the calendar scheduling world. We're way ahead of the game and we want to help make you more productive.</span>
     <div class="buttons svelte-oai1pc"></div></div>
@@ -197,28 +195,15 @@ header.svelte-oai1pc.svelte-oai1pc{color:var(--color-inverted);position:relative
 <section><div class="section-container svelte-18rfn6l"><div class="contact svelte-18rfn6l"><h2 class="heading">We're moving fast, signup for updates and more.</h2>
       <form action="" class="svelte-18rfn6l"><button type="button" class="svelte-18rfn6l">Submit</button></form>
       <span class="footer svelte-18rfn6l">We'll send you bi-weekly emails about our new features.</span></div>
-    <div class="cards svelte-18rfn6l"><div class="card svelte-18rfn6l"><div class="icon svelte-18rfn6l"></div>
+    <div class="cards svelte-18rfn6l"><div class="card svelte-18rfn6l"><div class="icon svelte-18rfn6l"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START --><path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8z"/><!-- HTML_TAG_END --></svg></div>
           <span class="title svelte-18rfn6l">User friendly &amp; fun</span>
           <span class="description svelte-18rfn6l">With a clear intuitive interface, you can easily add and view events.</span>
-        </div><div class="card svelte-18rfn6l"><div class="icon svelte-18rfn6l"></div>
+        </div><div class="card svelte-18rfn6l"><div class="icon svelte-18rfn6l"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 24 24" class="iconify iconify--mdi"><!-- HTML_TAG_START --><path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8z"/><!-- HTML_TAG_END --></svg></div>
           <span class="title svelte-18rfn6l">Responsive and speedy</span>
           <span class="description svelte-18rfn6l">Our desktop and web application are both super speedy.</span>
         </div></div></div></section></div> 
 
       	<script type="module">
-      import('/_symbols/4f97144f-5070-43be-b6b2-3a8f5ddf4fc3.js')
-      .then(({default:App}) => {
-        
-            new App({
-              target: document.querySelector('#section-7c563cf2'),
-              hydrate: true,
-              props: {"logo":{"":"","size":"11.8","image":{"alt":"","url":"https://wiuobdoxrhygumreqodx.supabase.co/storage/v1/object/public/images/41dbd844-f046-46f8-a634-fa0e517bdcad/1716159611813logo_big.svg"},"title":"Академ — и точка"},"site_nav":[{"link":{"url":"#section-47276df9","label":"О проекте"}},{"link":{"url":"//vk.com/club223900914","label":"Сообщество"}},{"link":{"url":"/why","label":"Предложения"}}],"cta":[{"icon":"octicon:people-16","link":{"url":"//vk.com/widget_community.php?act=a_subscribe_box&oid=-223900914&state=1","label":"Присоединиться","active":false},"mode":"popup"},{"icon":"material-symbols:question-mark-rounded","link":{"url":"//vk.com/widget_community.php?act=a_subscribe_box&oid=-223900914&state=1","label":"Тестирование","active":false},"mode":"self"}]}
-            })
-          
-      })
-      .catch(e => console.error(e))
-    
-
       import('/_symbols/b0436918-9229-436a-81ec-1d71e5e90314.js')
       .then(({default:App}) => {
         
@@ -226,6 +211,19 @@ header.svelte-oai1pc.svelte-oai1pc{color:var(--color-inverted);position:relative
               target: document.querySelector('#section-77c19aa5'),
               hydrate: true,
               props: {"heading":"We're moving fast, signup for updates and more.","form":{"footer":"We'll send you bi-weekly emails about our new features.","placeholder":"Your Email","button_label":"Submit"},"cards":[{"icon":"mdi:home","title":"User friendly & fun","description":"With a clear intuitive interface, you can easily add and view events."},{"icon":"mdi:home","title":"Responsive and speedy","description":"Our desktop and web application are both super speedy."}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    
+
+      import('/_symbols/4f97144f-5070-43be-b6b2-3a8f5ddf4fc3.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-7c563cf2'),
+              hydrate: true,
+              props: {"logo":{"":"","size":"11.8","image":{"alt":"","url":"https://wiuobdoxrhygumreqodx.supabase.co/storage/v1/object/public/images/41dbd844-f046-46f8-a634-fa0e517bdcad/1716159611813logo_big.svg"},"title":"Академ — и точка","size_":""},"site_nav":[],"cta":[]}
             })
           
       })
