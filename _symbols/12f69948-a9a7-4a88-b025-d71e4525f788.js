@@ -1,4 +1,4 @@
-// Footer Hero - Updated May 24, 2024
+// Footer Hero - Updated May 25, 2024
 function noop() { }
 function assign(tar, src) {
     // @ts-ignore
