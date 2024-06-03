@@ -257,7 +257,7 @@ header.svelte-oai1pc.svelte-oai1pc{color:var(--color-inverted);position:relative
         
         <button id="open" aria-label="Открыть меню" class="svelte-gna6ri"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden role="img" width="1em" height="1em" viewBox="0 0 20 20" class="iconify iconify--heroicons-solid"><!-- HTML_TAG_START --><path fill="currentColor" fill-rule="evenodd" d="M3 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1m0 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1m0 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1" clip-rule="evenodd"/><!-- HTML_TAG_END --></svg></button></nav></div>
     </div></header></div> 
-<div class="section" id="section-b16feccb"><header class=" svelte-oai1pc"><img src="/_assets/furvbshudzclccsgcubtc" alt="" class="svelte-oai1pc">
+<div class="section" id="section-b16feccb"><header class=" svelte-oai1pc"><img src="/_assets/sprloeeliiokttdqzspbc" alt="" class="svelte-oai1pc">
   <div class="heading-group svelte-oai1pc"><h1 class="heading svelte-oai1pc">Why Cali</h1>
     <span class="subheading svelte-oai1pc">We're pioneering in the calendar scheduling world. We're way ahead of the game and we want to help make you more productive.</span>
     <div class="buttons svelte-oai1pc"></div></div>
@@ -275,8 +275,32 @@ header.svelte-oai1pc.svelte-oai1pc{color:var(--color-inverted);position:relative
           <span class="description svelte-18rfn6l">Our desktop and web application are both super speedy.</span>
         </div></div></div></section></div> 
 
-      	<script type="module">import("/_symbols/b0436918-9229-436a-81ec-1d71e5e90314.js").then((({default:e})=>{new e({target:document.querySelector("#section-77c19aa5"),hydrate:!0,props:{heading:"We're moving fast, signup for updates and more.",form:{footer:"We'll send you bi-weekly emails about our new features.",placeholder:"Your Email",button_label:"Submit"},cards:[{icon:"mdi:home",title:"User friendly & fun",description:"With a clear intuitive interface, you can easily add and view events."},{icon:"mdi:home",title:"Responsive and speedy",description:"Our desktop and web application are both super speedy."}]}})})).catch((e=>console.error(e)));
-import("/_symbols/4f97144f-5070-43be-b6b2-3a8f5ddf4fc3.js").then((({default:e})=>{new e({target:document.querySelector("#section-7c563cf2"),hydrate:!0,props:{logo:{size:"9.978",image:{alt:"",url:"https://wiuobdoxrhygumreqodx.supabase.co/storage/v1/object/public/images/41dbd844-f046-46f8-a634-fa0e517bdcad/30be3b15-fe4c-476a-af50-370149056cf7.svg"},title:"Leave. And That's It"},site_nav:[],cta:[]}})})).catch((e=>console.error(e)));</script>
+      	<script type="module">
+      import('/_symbols/b0436918-9229-436a-81ec-1d71e5e90314.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-77c19aa5'),
+              hydrate: true,
+              props: {"heading":"We're moving fast, signup for updates and more.","form":{"footer":"We'll send you bi-weekly emails about our new features.","placeholder":"Your Email","button_label":"Submit"},"cards":[{"icon":"mdi:home","title":"User friendly & fun","description":"With a clear intuitive interface, you can easily add and view events."},{"icon":"mdi:home","title":"Responsive and speedy","description":"Our desktop and web application are both super speedy."}]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    	
+
+      import('/_symbols/4f97144f-5070-43be-b6b2-3a8f5ddf4fc3.js')
+      .then(({default:App}) => {
+        
+            new App({
+              target: document.querySelector('#section-7c563cf2'),
+              hydrate: true,
+              props: {"logo":{"size":"9.978","image":{"alt":"","url":"https://wiuobdoxrhygumreqodx.supabase.co/storage/v1/object/public/images/41dbd844-f046-46f8-a634-fa0e517bdcad/30be3b15-fe4c-476a-af50-370149056cf7.svg"},"title":"Leave. And That's It"},"site_nav":[],"cta":[]}
+            })
+          
+      })
+      .catch(e => console.error(e))
+    	</script>
       </div>
     </body>
   </html>
