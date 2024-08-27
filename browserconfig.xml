@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square70x70logo src="/_assets/f3b73af583b96e77d4290322fa2e69b6a062c366.10c1.png"/>
+            <square150x150logo src="/_assets/43c97a1abfab17f6335c22c7dd878cbf1e4cdc2f.1772.png"/>
+            <square310x310logo src="/_assets/53e65192e876d92641ac6820397da154771ae1cc.19b4.png"/>
+            <wide310x150logo src="/_assets/c973f611603efc4462c4e962ddb79710a6302971.31fa.png"/>
+            <TileColor>#2d89ef</TileColor>
+        </tile>
+    </msapplication>
+</browserconfig>
