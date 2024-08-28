@@ -1,0 +1,56 @@
+{
+    "name": "Akait Project",
+    "short_name": "Akait Project",
+    "icons": [
+        {
+            "src": "/_assets/ca74f56495a76d7a2f633854154f46ef79992f9a.6b0.png",
+            "sizes": "36x36",
+            "type": "image/png"
+        },
+        {
+            "src": "/_assets/7bcc2bdd7784371d63e1457b5fb30efc5f76fbe7.948.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "/_assets/95ef36905d44dcd412bdf46cd2fc9cde11184618.dfc.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "/_assets/7d69d58f5be560dd061d7f9700cd50e3765ba5fd.13f4.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "/_assets/028bb9e82f310864b5089aa68f7ff60dcdc5c825.1f37.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/_assets/4db5b3813e0fb94d7d40af9575095cfa27ceae2f.296c.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/_assets/9286ef3490ae3a19a602941b92a58d2749e5d191.38ca.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/_assets/dd73e618810c9dec3b2efde73eee9dc10c0478ff.569e.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/_assets/66410a282eaee565ae0ddf9950505268a0cf1a27.7639.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "start_url": "https://new.akait.ru/en",
+    "display": "standalone",
+    "orientation": "portrait"
+}
